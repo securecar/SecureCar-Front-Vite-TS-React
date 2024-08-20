@@ -1,8 +1,18 @@
-.img{
-    width: 80px;
+img.logo{
     height: 80px;
+    object-fit: contain;
+
 }
 .header{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    background-color: #02b0e2;
+    padding: 20px;
+    align-items: center;
 }
+img:not(.logo){
+    height: 50px;
+    object-fit: contain;
+}
+
+
