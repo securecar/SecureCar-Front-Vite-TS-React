@@ -1,10 +1,11 @@
 type InputArea={
     label : string;
-    required: boolean
-    placeHolder : string
+    required: boolean;
+    placeHolder : string;
 }
 
 const InputArea = ({label,required ,placeHolder}:InputArea)=>{
+
 
     return(
         <>
