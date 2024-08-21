@@ -2,6 +2,8 @@ import Botao from "../../../../componentes/Botao/Botao"
 import InputArea from "../../../../componentes/InputArea/InputArea"
 
 
+
+
 const FormRegistro = ()=>{
 
     return(
