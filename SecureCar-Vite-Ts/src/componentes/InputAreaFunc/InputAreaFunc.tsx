@@ -3,7 +3,7 @@ type InputAreaFunc={
     required: boolean;
     placeHolder : string;
     value : string ;
-    aoAlterado: (valor: any) => void ;
+    aoAlterado: (valor: string) => void ;
 }
 
 const InputAreaFunc = ({value,aoAlterado,label,required ,placeHolder}:InputAreaFunc)=>{
