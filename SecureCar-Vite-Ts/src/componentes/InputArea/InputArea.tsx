@@ -4,23 +4,28 @@ type InputArea={
     placeHolder : string;
     disable ?: boolean;
     value ?: string;
-    children ?: React.ReactNode;
+    onChange ?: (valor : string) =>void;
 }
 
-const InputArea = ({children,value,label,required ,placeHolder, disable}:InputArea)=>{
+const InputArea = ({onChange,value,label,required ,placeHolder, disable}:InputArea)=>{
 
+    const aoDigitado = (e :string)=>{
+        if(onChange != undefined){
+            onChange(e)
+        } 
+    }
 
     return(
-        <div className="around">
-            <label>{label}</label>
-            <input
-            value={value}
-            required={required}
-            placeholder={placeHolder}
-            disabled={disable}>
-            </input>
-            {children}
-        </div>
+        <>
+        <label>{label}</label>
+        <input
+        value={value}
+        required={required}
+        placeholder={placeHolder}
+        disabled={disable}
+        onChange={e => aoDigitado(e.target.value)}>
+        </input>
+        </>
     )
 }
 
