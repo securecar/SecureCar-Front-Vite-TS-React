@@ -16,7 +16,8 @@ const FormRegistro = ()=>{
                 <InputArea placeHolder="Confirme sua senha" label="Confirmar Senha" required={true}/>
                 <InputArea placeHolder="Digite seu CPF" label="Cpf" required={true}/>
                 <InputArea placeHolder="Coloque sua data de Nascimento" label="Data de Nascimento" required={true}/>
-                <InputArea placeHolder="Escolha seu stado" label="Estado" required={true}/>
+                <InputArea placeHolder="Digite seu Cep" label="CEP" required={true}/>
+                <InputArea placeHolder="Escolha seu Estado" label="Estado" required={true}/>
                 <InputArea placeHolder="Escolha sua Cidade" label="Cidade" required={true}/>
                 <Botao tipo="submit">Cadastre-se</Botao>
             </form>
