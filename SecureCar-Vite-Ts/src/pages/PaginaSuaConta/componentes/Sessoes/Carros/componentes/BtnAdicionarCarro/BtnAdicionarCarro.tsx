@@ -1,5 +1,5 @@
 
-import { Carro } from "@/componentes/TiposPadroes/Carro"
+import { Carro } from "@/assets/TiposPadroes/Carro"
 import ModalAdicionarCarro from "../ModalAdicionarCarro/ModalAdicionarCarro"
 
 import { useState } from "react"

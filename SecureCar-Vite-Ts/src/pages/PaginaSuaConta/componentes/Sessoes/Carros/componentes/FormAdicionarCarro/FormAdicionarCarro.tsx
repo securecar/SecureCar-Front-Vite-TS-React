@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Botao from "../../../../../../../componentes/Botao/Botao"
-import { Carro } from "../../../../../../../componentes/TiposPadroes/Carro";
+import { Carro } from "../../../../../../../assets/TiposPadroes/Carro";
 import InputArea from "@/componentes/InputArea/InputArea";
 
 type FormAdicionarCarro ={

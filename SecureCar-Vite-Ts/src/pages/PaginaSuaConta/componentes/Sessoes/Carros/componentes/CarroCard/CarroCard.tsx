@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 import CarroModal from "../CarroModal/CarroModal"
-import { Carro } from "../../../../../../../componentes/TiposPadroes/Carro";
+import { Carro } from "../../../../../../../assets/TiposPadroes/Carro";
 
 type CarroCardProps = {
     nome : string;

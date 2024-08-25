@@ -1,6 +1,6 @@
 import { useEffect, useRef} from "react";
 import FormAdicionarCarro from "../FormAdicionarCarro/FormAdicionarCarro";
-import { Carro } from "@/componentes/TiposPadroes/Carro";
+import { Carro } from "@/assets/TiposPadroes/Carro";
 
 type ModalAdicionarCarro = {
     isOpen : boolean;

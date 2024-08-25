@@ -8,17 +8,35 @@ import Endereco from "./componentes/Sessoes/Endereço/Endereco";
 const PaginaSuaConta = ()=>{
     
     const [conteudo,setConteudo] = useState('Suas Configuracoes')
+    const [fontSize, setFontSize] = useState("")
     const [modo , setModo] = useState(() :boolean =>{
         const saved = localStorage.getItem("check");
         return saved !== null ? JSON.parse(saved) : true;
     })
 
-    let changeModo = (modo :boolean)=>{
-        setModo(modo)
+    let changeFonte = (fontSize : string) =>{
+        if(fontSize === "16px"){
+            setFontSize("")
+        }else if(fontSize === "20px"){
+            setFontSize("")
+        }else if(fontSize === "24px"){
+            setFontSize("")
+        }
+    }
+
+    let changeModo = (modo :string)=>{
+        if( modo === "Modo Escuro"){
+            setModo(true)
+            return;
+        }
+        setModo(false)
+        return; 
     }
 
 
     let listaCarro : [] = []
+
+
 
 
     let conteudoChanger = () => {
@@ -26,7 +44,7 @@ const PaginaSuaConta = ()=>{
             case('Suas Configuracoes'):
                 return <SuasConfiguracoes nome="gerson bragantino" cpf="123.123.123-12" senha="********" email="gersonbragantino@email.com"/>
             case('Acessibilidade'):
-                return  <Acessibilidade/>
+                return  <Acessibilidade onChangeFonte={changeFonte} onChangeModo={changeModo}/>
             case('Endereço'):
                 return <Endereco nome="gerson bragantino" cep="12312-123" numero="10" cidade="Sao pulo" estado="SP"/>
             case('Carros'):
