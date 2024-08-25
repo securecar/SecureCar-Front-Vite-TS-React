@@ -3,6 +3,7 @@ import BtnSessoesPerfil from "./componentes/BtnSessoesPerfil/BtnSessoesPerfil";
 import Carros from "./componentes/Sessoes/Carros/Carros";
 import Acessibilidade from "./componentes/Sessoes/Acessibilidade/Acessibilidade";
 import SuasConfiguracoes from "./componentes/Sessoes/SuasConfiguracoes/SuasConfiguracoes";
+import Endereco from "./componentes/Sessoes/Endereço/Endereco";
 
 const PaginaSuaConta = ()=>{
     
@@ -27,7 +28,7 @@ const PaginaSuaConta = ()=>{
             case('Acessibilidade'):
                 return  <Acessibilidade/>
             case('Endereço'):
-                return <h1>endereco</h1>
+                return <Endereco nome="gerson bragantino" cep="12312-123" numero="10" cidade="Sao pulo" estado="SP"/>
             case('Carros'):
                 return <Carros listaCarro={listaCarro}/>
         }

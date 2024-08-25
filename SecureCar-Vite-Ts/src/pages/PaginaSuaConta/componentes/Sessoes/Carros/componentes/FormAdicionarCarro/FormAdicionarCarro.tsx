@@ -1,7 +1,7 @@
 import { useState } from "react"
-import InputAreaFunc from "../../../../../../../componentes/InputAreaFunc/InputAreaFunc"
 import Botao from "../../../../../../../componentes/Botao/Botao"
 import { Carro } from "../../../../../../../componentes/TiposPadroes/Carro";
+import InputArea from "@/componentes/InputArea/InputArea";
 
 type FormAdicionarCarro ={
     onCarroCadastrado : (carro: Carro) => void;
@@ -32,46 +32,46 @@ const FormAdicionarCarro = ({onCarroCadastrado} : FormAdicionarCarro) =>{
     };
     return(
         <form onSubmit={onSave}>
-            <InputAreaFunc
+            <InputArea
             value = {modelo}
             required={true}
-            aoAlterado = {valor => setModelo(valor)}
+            onChange = {valor => setModelo(valor)}
             label = "Modelo"
             placeHolder = "Digite o Modelo do seu carro aqui"/>
-            <InputAreaFunc
+            <InputArea
             value = {marca}
             required={true}
-            aoAlterado = {valor => setMarca(valor)}
+            onChange = {valor => setMarca(valor)}
             label = "Marca"
             placeHolder = "Digite a Marca do seu carro aqui"/>
-            <InputAreaFunc
+            <InputArea
             value = {ano}
             required={true}
-            aoAlterado = {valor => setAno(valor)}
+            onChange = {valor => setAno(valor)}
             label = "Ano"
             placeHolder = "Digite o Ano do seu carro aqui"/>
-            <InputAreaFunc
+            <InputArea
             value = {chassi}
             required={true}
-            aoAlterado = {valor => setChassi(valor)}
+            onChange = {valor => setChassi(valor)}
             label = "Chassi"
             placeHolder = "Digite o Chassi do seu carro aqui"/>
-            <InputAreaFunc
+            <InputArea
             value = {quilometragem}
             required={true}
-            aoAlterado = {valor => setQuilometragem(valor)}
+            onChange = {valor => setQuilometragem(valor)}
             label = "Quilômetragem"
             placeHolder = "Digite a Quilometragem do seu carro aqui"/>
-            <InputAreaFunc
+            <InputArea
             value = {placa}
             required={true}
-            aoAlterado = {valor => setPlaca(valor)}
+            onChange = {valor => setPlaca(valor)}
             label = "Placa"
             placeHolder = "Digite a Placa do seu carro aqui"/>
-             <InputAreaFunc
+             <InputArea
             value = {seguro}
             required={true}
-            aoAlterado = {valor => setSeguro(valor)}
+            onChange = {valor => setSeguro(valor)}
             label = "Seguro"
             placeHolder = "Digite a seguro do seu carro aqui"/>
             <div className="BtnSubmit-area">
