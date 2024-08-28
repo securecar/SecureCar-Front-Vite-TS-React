@@ -7,7 +7,7 @@ const FormLogin = ()=>{
     return(
         <>
         <fieldset>
-            <form className="gap-0.5 flex flex-col">
+            <form className="flex flex-col">
                 <InputArea placeHolder="Digite seu Cpf" label="Cpf" required={true}/>
                 <InputArea placeHolder="Digite sua senha" label="Senha" required={true}/>
                 <div className="p-3 w-full flex items-center justify-center">

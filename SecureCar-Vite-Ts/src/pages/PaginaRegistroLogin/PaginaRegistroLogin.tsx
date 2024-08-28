@@ -19,10 +19,10 @@ const PaginaRegistroLogin = ()=>{
 
     return(
         <div className="h-screen flex flex-col items-center mt-6 w-full">
-        <div className="w-1/3">
+        <div className="border-2 rounded-xl shadow-xl p-4 w-1/3">
             <div className="flex justify-around">
-            <button className={`text-lg font-semibold w-2/5 rounded-2xl p-3 border-2 border-primary shadow-xl ${conteudo == "Cadastro" ? "bg-primary text-white":""}`} onClick={()=>setConteudo('Cadastro')}>Cadastrar-se</button>
-            <button className={`text-lg font-semibold w-2/5 rounded-2xl p-3 border-2 border-primary shadow-xl ${conteudo == "Login" ? "bg-primary text-white":""}`} onClick={()=>setConteudo('Login')}>Acessar Conta</button>
+            <button className={`text-lg font-semibold w-2/5 rounded-xl p-3 border-2 border-primary shadow-xl hover:bg-primary hover:text-white ${conteudo == "Cadastro" ? "bg-primary text-white":""}`} onClick={()=>setConteudo('Cadastro')}>Cadastrar-se</button>
+            <button className={`text-lg font-semibold w-2/5 rounded-xl p-3 border-2 border-primary shadow-xl hover:bg-primary hover:text-white ${conteudo == "Login" ? "bg-primary text-white":""}`} onClick={()=>setConteudo('Login')}>Acessar Conta</button>
             </div>
             {conteudoChanger()}
         </div>
