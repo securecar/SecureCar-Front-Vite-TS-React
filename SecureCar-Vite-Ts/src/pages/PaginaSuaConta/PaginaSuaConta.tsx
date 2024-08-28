@@ -61,7 +61,7 @@ const PaginaSuaConta = ()=>{
     let conteudoChanger = () => {
         switch(conteudo){
             case('Suas Configuracoes'):
-                return <SuasConfiguracoes nome="gerson bragantino" cpf="123.123.123-12" senha="********" email="gersonbragantino@email.com"/>
+                return <SuasConfiguracoes dataNascimento="25/10/1980" nome="gerson bragantino" cpf="123.123.123-12" senha="********" email="gersonbragantino@email.com"/>
             case('Acessibilidade'):
                 return  <Acessibilidade onChangeFonte={changeFonte} onChangeModo={changeModo}/>
             case('Endereco'):

@@ -54,9 +54,9 @@ const Endereco = ({nome,cep,numero,cidade,estado} : EnderecoProps)=>{
                             <img className='w-10 cursor-pointer' onClick={changeDisable} src={iconEdit} alt='Icone para mudar informações'/>
                         </div>
                         <InputArea onChange={valor=>setCepUser(valor)} label='Cep' required={true} placeHolder={cepUser} value={cepUser} disable={disable}></InputArea>
-                        <InputArea onChange={valor=>setEstadoUser(valor)} label='Estado' required={true} placeHolder={estadoUser} value={estadoUser} disable={disable}></InputArea>
-                        <InputArea onChange={valor=>setCidadeUser(valor)} label='Cidade' required={true} placeHolder={cidadeUser} value={cidadeUser} disable={disable}></InputArea>
-                        <InputArea onChange={valor=>setNumeroUser(valor)} label='Número' required={true} placeHolder={numeroUser} value={numeroUser} disable={disable}></InputArea>
+                        <InputArea onChange={valor=>setEstadoUser(valor)} label='Estado' required={true} placeHolder={estadoUser} value={estadoUser} disable={true}></InputArea>
+                        <InputArea onChange={valor=>setCidadeUser(valor)} label='Cidade' required={true} placeHolder={cidadeUser} value={cidadeUser} disable={true}></InputArea>
+                        <InputArea onChange={valor=>setNumeroUser(valor)} label='Número' required={true} placeHolder={numeroUser} value={numeroUser} disable={true}></InputArea>
                         <div className='mt-3 w-full flex justify-end'>
                             <Botao tipo='submit'>Salvar Informações</Botao>
                         </div>

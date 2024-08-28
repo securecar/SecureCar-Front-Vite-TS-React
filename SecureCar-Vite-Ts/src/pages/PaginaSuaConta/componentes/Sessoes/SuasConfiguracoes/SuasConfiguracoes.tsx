@@ -10,14 +10,16 @@ type SuasConfiguracoesProps ={
     cpf:string;
     senha:string;
     email:string;
+    dataNascimento : string;
 }
 
-const SuasConfiguracoes = ({nome,cpf,senha,email} : SuasConfiguracoesProps)=>{
+const SuasConfiguracoes = ({dataNascimento, nome,cpf,senha,email} : SuasConfiguracoesProps)=>{
 
     const [nomeUser, setNomeUser] = useState(nome);
     const [cpfUser, setCpfUser] = useState(cpf);
     const [senhaUser, setSenhaUser] = useState(senha);
     const [emailUser, setEmailUser] = useState(email);
+    const [dataNascimentoUser, setDataNascimentoUser] = useState(dataNascimento)
     const [disable,setDisable] = useState(true);
 
     function aoSalvar(e : React.FormEvent<HTMLFormElement>){
@@ -26,7 +28,8 @@ const SuasConfiguracoes = ({nome,cpf,senha,email} : SuasConfiguracoesProps)=>{
             nome: nomeUser,
             cpf : cpfUser,
             senha : senhaUser,
-            email : emailUser
+            email : emailUser,
+            dataNascimento : dataNascimentoUser
         };
     }
 
@@ -55,6 +58,7 @@ const SuasConfiguracoes = ({nome,cpf,senha,email} : SuasConfiguracoesProps)=>{
                         <InputArea onChange={valor=>setEmailUser(valor)} label='Email' required={true} placeHolder={email} value={emailUser} disable={disable}></InputArea>
                         <InputArea onChange={valor=>setSenhaUser(valor)} label='Senha' required={true} placeHolder={senha} value={senhaUser} disable={disable}></InputArea>
                         <InputArea onChange={valor=>setCpfUser(valor)} label='Cpf' required={true} placeHolder={cpf} value={cpfUser} disable={disable}></InputArea>
+                        <InputArea onChange={valor=>setDataNascimentoUser(valor)} label='Data de Nascimento' required={true} placeHolder={dataNascimento} value={dataNascimentoUser} disable={disable}></InputArea>
                         <div className='mt-3 w-full flex justify-end'>
                             <Botao tipo='submit'>Salvar Informações</Botao>
                         </div>

@@ -1,6 +1,7 @@
 import { Carro } from "../../../../../../../assets/TiposPadroes/Carro";
 
 import { useRef , useEffect } from "react"
+import InfoCarro from "./InfoCarro/InfoCarro";
 
 
 type CarroModalProps = {
@@ -32,22 +33,23 @@ const CarroModal = ({isOpen, carro,children} : CarroModalProps)=>{
 
     const revisao = ()=>{
         if(parseFloat(carro.quilometragem) > 8000){
-            return<span>Cuidado está próximo da revisão de 10000 Quilômetros. Faltam {10000 - parseFloat(carro.quilometragem)} Quilômetros.</span>
+            return`Cuidado está próximo da revisão de 10000 Quilômetros. Faltam ${10000 - parseFloat(carro.quilometragem)} Quilômetros.`
         }else{
-            return<span>Faltam {10000 - (parseFloat(carro.quilometragem)/10000)} Quilômetros para a revisão</span>
+            return`Faltam ${10000 - (parseFloat(carro.quilometragem)/10000)} Quilômetros para a revisão`
         }
     }
     return(
-        <dialog ref = {ref} className={`CarroModal ${isOpen ? "open":""}`}>
-            <div className="children">{children}</div>
-            <h1 className="carroNome">{carro.modelo}</h1>
-            <p className="carroInfo">Marca <span>{carro.marca}</span></p>
-            <p className="carroInfo">Placa <span>{carro.placa}</span></p>
-            <p className="carroInfo">Ano <span>{carro.ano}</span></p>
-            <p className="carroInfo">Quilometragem <span>{carro.quilometragem}</span></p>
-            <p className="carroInfo">Chassi <span>{carro.chassi}</span></p>
-            <p className="carroInfo">Revisão dos 10000 Quilômetros {revisao()}</p>
-            <p className="carroInfo">Seguro {carro.seguro}</p>
+        <dialog ref = {ref} className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1/4 pr-2 p-5 ${isOpen ? "open":""}`}>
+            <div className="flex items-center justify-center float-right w-7 h-7 rounded-2xl border-2 border-primary shadow-xl">{children}</div>
+
+            <h1 className="text-3xl font-bold">{carro.modelo}</h1>
+            <InfoCarro title="Marca" span={carro.marca}/>
+            <InfoCarro title="Placa" span={carro.placa}/>
+            <InfoCarro title="Ano" span={carro.ano} />
+            <InfoCarro title="Quilometragem" span={carro.quilometragem} />
+            <InfoCarro title="Chassi" span={carro.chassi} />
+            <InfoCarro title="Revisão dos 10000 Quilômetros" span={revisao()} />
+            <InfoCarro title="Seguro" span={carro.seguro} />
         </dialog>
     )
 }

@@ -14,8 +14,8 @@ const CarroCard = ({nome, carro} : CarroCardProps) =>{
 
 
     return(
-        <div className="carroCard">
-            <button className="carroCard-h1" onClick={()=>setShow(true)}>{nome}</button>
+        <div className="b-primary b-2">
+            <button className="hover:bg-primary hover:text-white font-semibold text-xl border-primary border-2 w-20 h-20" onClick={()=>setShow(true)}>{nome}</button>
             <CarroModal carro ={carro} isOpen= {show}><button className="btnClose" onClick={()=>setShow(false)}>X</button></CarroModal>
         </div>
     )
