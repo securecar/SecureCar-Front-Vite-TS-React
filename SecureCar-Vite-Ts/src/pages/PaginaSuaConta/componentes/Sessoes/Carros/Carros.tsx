@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 import BtnAdicionarCarro from "./componentes/BtnAdicionarCarro/BtnAdicionarCarro";
-import { Carro } from "../../../../../componentes/TiposPadroes/Carro";
+import { Carro } from "../../../../../assets/TiposPadroes/Carro";
 import CarroCard from "./componentes/CarroCard/CarroCard";
 
 let listaCarros : Carro[] = []

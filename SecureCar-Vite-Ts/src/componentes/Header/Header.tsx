@@ -4,6 +4,7 @@ import portoSeguroLogo from "../../assets/imgs/porto-seguro.svg";
 import imagemPerfilLogo from "../../assets/icons/profile-pic.svg";
 import './header.css'
 
+
 const Header = ()=>{
 
     return(

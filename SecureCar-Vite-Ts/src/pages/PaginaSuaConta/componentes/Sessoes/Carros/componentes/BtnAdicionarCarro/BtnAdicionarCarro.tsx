@@ -1,10 +1,11 @@
 
+import { Carro } from "@/assets/TiposPadroes/Carro"
 import ModalAdicionarCarro from "../ModalAdicionarCarro/ModalAdicionarCarro"
 
 import { useState } from "react"
 
 type btnAdicionarCarroProps ={
-    onAddCarro : (carro : any) => void
+    onAddCarro : (carro : Carro) => void
 }
 
 const BtnAdicionarCarro = ({onAddCarro} : btnAdicionarCarroProps) =>{
@@ -12,7 +13,7 @@ const BtnAdicionarCarro = ({onAddCarro} : btnAdicionarCarroProps) =>{
     const[show,setShow] = useState(false)
 
     
-    const handleAddCarro = (carro :any) => {
+    const handleAddCarro = (carro :Carro) => {
         onAddCarro(carro);
         setShow(false);
     

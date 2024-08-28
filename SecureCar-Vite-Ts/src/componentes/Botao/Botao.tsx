@@ -6,7 +6,7 @@ type BotaoProps = {
 const Botao = ({children, tipo} : BotaoProps )=>{
 
     return(
-        <button type={tipo}>{children}</button>
+        <button className="hover:bg-primary hover:text-white font-semibold text-lg w-2/5 rounded-xl p-3 border-2 border-primary shadow-xl" type={tipo}>{children}</button>
     )
 }
 

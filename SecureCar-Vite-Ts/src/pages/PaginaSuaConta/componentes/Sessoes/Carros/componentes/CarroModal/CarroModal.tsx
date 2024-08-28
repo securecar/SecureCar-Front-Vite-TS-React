@@ -1,4 +1,4 @@
-import { Carro } from "../../../../../../../componentes/TiposPadroes/Carro";
+import { Carro } from "../../../../../../../assets/TiposPadroes/Carro";
 
 import { useRef , useEffect } from "react"
 
