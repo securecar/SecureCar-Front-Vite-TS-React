@@ -18,16 +18,15 @@ const PaginaRegistroLogin = ()=>{
     
 
     return(
-        <>
-        <h1>Pagina de Registro e Login</h1>
-        <div>
-            <div>
-            <button onClick={()=>setConteudo('Cadastro')}>Cadastrar-se</button>
-            <button onClick={()=>setConteudo('Login')}>Acessar Conta</button>
+        <div className="h-screen flex flex-col items-center mt-6 w-full">
+        <div className="w-1/3">
+            <div className="flex justify-around">
+            <button className={`text-lg font-semibold w-2/5 rounded-2xl p-3 border-2 border-primary shadow-xl ${conteudo == "Cadastro" ? "bg-primary text-white":""}`} onClick={()=>setConteudo('Cadastro')}>Cadastrar-se</button>
+            <button className={`text-lg font-semibold w-2/5 rounded-2xl p-3 border-2 border-primary shadow-xl ${conteudo == "Login" ? "bg-primary text-white":""}`} onClick={()=>setConteudo('Login')}>Acessar Conta</button>
             </div>
             {conteudoChanger()}
         </div>
-        </>
+        </div>
     )
 }
 

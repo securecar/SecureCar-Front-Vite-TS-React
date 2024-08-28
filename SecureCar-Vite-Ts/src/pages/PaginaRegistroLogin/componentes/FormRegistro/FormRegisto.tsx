@@ -9,7 +9,7 @@ const FormRegistro = ()=>{
     return(
         <>
         <fieldset>
-            <form>
+            <form className="gap-0.5 flex flex-col">
                 <InputArea placeHolder="Digite seu nome completo" label="Nome Completo" required={true}/>
                 <InputArea placeHolder="Digite seu email" label="Email" required={true}/>
                 <InputArea placeHolder="Digite sua senha" label="Senha" required={true}/>
@@ -19,7 +19,9 @@ const FormRegistro = ()=>{
                 <InputArea placeHolder="Digite seu Cep" label="CEP" required={true}/>
                 <InputArea placeHolder="Escolha seu Estado" label="Estado" required={true}/>
                 <InputArea placeHolder="Escolha sua Cidade" label="Cidade" required={true}/>
-                <Botao tipo="submit">Cadastre-se</Botao>
+                <div className="p-3 w-full flex items-center justify-center">
+                    <Botao tipo="submit">Cadastre-se</Botao>
+                </div>
             </form>
         </fieldset>
         </>

@@ -45,7 +45,7 @@ const SuasConfiguracoes = ({nome,cpf,senha,email} : SuasConfiguracoesProps)=>{
             </section>
             <section className="bottom">
                 <h2>Informações</h2>
-                <fieldset>
+                <fieldset className='flex-col'>
                 <button type='button' onClick={changeDisable}>coisa</button>
                     <form action="./" onSubmit={aoSalvar}>
                         <InputArea onChange={valor=>setNomeUser(valor)} label='Nome' required={true} placeHolder={nome} value={nomeUser} disable={disable}></InputArea>
