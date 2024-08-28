@@ -9,6 +9,10 @@ const PaginaSuaConta = ()=>{
     
     const [conteudo,setConteudo] = useState('Suas Configuracoes')
     const [fontSize, setFontSize] = useState("")
+    const [suasConfiguracoes, setSuasConfiguracoes] = useState<boolean>()
+    const [acessibilidade, setAcessibilidade] = useState<boolean>()
+    const [carros, setCarros] = useState<boolean>()
+    const [endereco, setEndereco] = useState<boolean>()
     const [modo , setModo] = useState(() :boolean =>{
         const saved = localStorage.getItem("check");
         return saved !== null ? JSON.parse(saved) : true;
@@ -33,10 +37,25 @@ const PaginaSuaConta = ()=>{
         return; 
     }
 
+    function setBotoes(config : boolean, acessibilidade : boolean, endereco : boolean, carros : boolean){
+        if(config != undefined){
+
+            return;
+        } 
+        return;
+    }
+
 
     let listaCarro : [] = []
 
 
+    function mudaBotao(nome : string){
+        setConteudo(nome)
+        setSuasConfiguracoes(nome== "Suas Configuracoes")
+        setCarros(nome== "Carros")
+        setEndereco(nome== "Endereco")
+        setAcessibilidade(nome== "Acessibilidade")
+    }
 
 
     let conteudoChanger = () => {
@@ -45,7 +64,7 @@ const PaginaSuaConta = ()=>{
                 return <SuasConfiguracoes nome="gerson bragantino" cpf="123.123.123-12" senha="********" email="gersonbragantino@email.com"/>
             case('Acessibilidade'):
                 return  <Acessibilidade onChangeFonte={changeFonte} onChangeModo={changeModo}/>
-            case('Endereço'):
+            case('Endereco'):
                 return <Endereco nome="gerson bragantino" cep="12312-123" numero="10" cidade="Sao pulo" estado="SP"/>
             case('Carros'):
                 return <Carros listaCarro={listaCarro}/>
@@ -54,16 +73,16 @@ const PaginaSuaConta = ()=>{
     }
 
     return(
-        <div className={`container ${modo ? "escuro":""}`}>
-            <div className='left'>
+        <div className={`container flex w-full  ${modo ? "escuro":""}`}>
+            <div className='w-1/3 left'>
                 <nav>
-                    <BtnSessoesPerfil onClick ={ () => setConteudo('Suas Configuracoes')} name ="Suas Configurações" />
-                    <BtnSessoesPerfil name="Acessibilidade" onClick={() => setConteudo('Acessibilidade')} />
-                    <BtnSessoesPerfil name="Endereço" onClick={() => setConteudo('Endereço')} />
-                    <BtnSessoesPerfil name="Carros" onClick={() => setConteudo('Carros')} />
+                    <BtnSessoesPerfil clicado = {suasConfiguracoes} onClick ={ () => mudaBotao("Suas Configuracoes")} name ="Suas Configurações" />
+                    <BtnSessoesPerfil clicado = {acessibilidade} name="Acessibilidade" onClick={() => mudaBotao("Acessibilidade")} />
+                    <BtnSessoesPerfil clicado = {endereco} name="Endereço" onClick={() => mudaBotao("Endereco")} />
+                    <BtnSessoesPerfil clicado = {carros} name="Carros" onClick={() => mudaBotao("Carros")} />
                 </nav>
             </div>
-            <div className='right'>
+            <div className='w-2/3 mt-20 right'>
                 {conteudoChanger()}
             </div>
 

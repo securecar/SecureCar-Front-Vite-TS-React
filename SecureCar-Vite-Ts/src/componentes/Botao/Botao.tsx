@@ -1,12 +1,13 @@
 type BotaoProps = {
     children:React.ReactNode;
     tipo : "submit" | "reset" | "button" | undefined
+    onClick ?: () => void
 }
 
-const Botao = ({children, tipo} : BotaoProps )=>{
+const Botao = ({onClick, children, tipo} : BotaoProps )=>{
 
     return(
-        <button className="hover:bg-primary hover:text-white font-semibold text-lg w-2/5 rounded-xl p-3 border-2 border-primary shadow-xl" type={tipo}>{children}</button>
+        <button onClick={onClick} className="hover:bg-primary hover:text-white font-semibold text-lg w-2/5 rounded-xl p-3 border-2 border-primary shadow-xl" type={tipo}>{children}</button>
     )
 }
 

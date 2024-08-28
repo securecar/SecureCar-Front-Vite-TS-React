@@ -17,9 +17,9 @@ const InputArea = ({onChange,value,label,required ,placeHolder, disable}:InputAr
 
     return(
         <>
-        <label className="mt-3 text-lg">{label}</label>
+        <label className="mt-3 font-semibold text-lg">{label}</label>
         <input
-        className="rounded-xl p-3 border-2 border-primary shadow-xl"
+        className={`${disable==true? "bg-gray-300" : ""} rounded-xl p-3 border-2 border-primary shadow-xl`}
         value={value}
         required={required}
         placeholder={placeHolder}

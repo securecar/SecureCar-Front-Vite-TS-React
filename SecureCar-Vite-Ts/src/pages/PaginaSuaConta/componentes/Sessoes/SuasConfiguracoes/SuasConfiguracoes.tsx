@@ -2,6 +2,7 @@
 import Botao from '@/componentes/Botao/Botao';
 import InputArea from '@/componentes/InputArea/InputArea';
 import { useState } from 'react';
+import  iconEdit from '@/assets/icons/edit-svgrepo-com.svg'
 import AreaPerfil from "@/pages/PaginaSuaConta/componentes/AreaPerfil/AreaPerfil";
 
 type SuasConfiguracoesProps ={
@@ -39,20 +40,24 @@ const SuasConfiguracoes = ({nome,cpf,senha,email} : SuasConfiguracoesProps)=>{
     }
 
     return(
-        <div className="perfil">
+        <div className="border-2 rounded-xl shadow-xl p-4 w-full flex flex-col perfil">
             <section className="top">
                 <AreaPerfil nome={nome}/>
             </section>
             <section className="bottom">
-                <h2>Informações</h2>
                 <fieldset className='flex-col'>
-                <button type='button' onClick={changeDisable}>coisa</button>
-                    <form action="./" onSubmit={aoSalvar}>
+                    <form className='mt-6 flex flex-col' action="./" onSubmit={aoSalvar}>
+                        <div className='w-full flex justify-between'>
+                            <h2 className='text-3xl font-bold'>Informações</h2>
+                            <img className='w-10 cursor-pointer' onClick={changeDisable} src={iconEdit} alt='Icone para mudar informações'/>
+                        </div>
                         <InputArea onChange={valor=>setNomeUser(valor)} label='Nome' required={true} placeHolder={nome} value={nomeUser} disable={disable}></InputArea>
                         <InputArea onChange={valor=>setEmailUser(valor)} label='Email' required={true} placeHolder={email} value={emailUser} disable={disable}></InputArea>
                         <InputArea onChange={valor=>setSenhaUser(valor)} label='Senha' required={true} placeHolder={senha} value={senhaUser} disable={disable}></InputArea>
                         <InputArea onChange={valor=>setCpfUser(valor)} label='Cpf' required={true} placeHolder={cpf} value={cpfUser} disable={disable}></InputArea>
-                        <Botao tipo='submit'>Salvar Informações</Botao>
+                        <div className='mt-3 w-full flex justify-end'>
+                            <Botao tipo='submit'>Salvar Informações</Botao>
+                        </div>
                     </form>
                 </fieldset>
             </section>
