@@ -7,12 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary:{
+        primary: {
           light: '#a9ffe9',
           DEFAULT: '#02b0e2',
           dark: '#000',
         }
-      }
+      },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+      },
     },
   },
   plugins: [],
