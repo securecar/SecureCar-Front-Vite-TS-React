@@ -1,6 +1,7 @@
 import InputArea from "@/componentes/InputArea/InputArea"
 import AreaPerfil from "../../AreaPerfil/AreaPerfil"
 import { useState } from "react";
+import  iconEdit from '@/assets/icons/edit-svgrepo-com.svg'
 import Botao from "@/componentes/Botao/Botao";
 
 type EnderecoProps = {
@@ -41,20 +42,24 @@ const Endereco = ({nome,cep,numero,cidade,estado} : EnderecoProps)=>{
     }
 
     return(
-        <div className="Endereco">
+        <div className="border-2 rounded-xl shadow-xl p-4 w-full flex flex-col Endereco">
             <section className="top">
                 <AreaPerfil nome={nome}/>
             </section>
             <section className="bottom">
-                <h2>Informações</h2>
-                <fieldset>
-                <button type='button' onClick={changeDisable}>coisa</button>
-                    <form action="./" onSubmit={aoSalvar}>
+                <fieldset className='flex-col'>
+                    <form className='mt-6 flex flex-col' action="./" onSubmit={aoSalvar}>
+                    <div className='w-full flex justify-between'>
+                            <h2 className='text-3xl font-bold'>Endereço</h2>
+                            <img className='w-10 cursor-pointer' onClick={changeDisable} src={iconEdit} alt='Icone para mudar informações'/>
+                        </div>
                         <InputArea onChange={valor=>setCepUser(valor)} label='Cep' required={true} placeHolder={cepUser} value={cepUser} disable={disable}></InputArea>
-                        <InputArea onChange={valor=>setEstadoUser(valor)} label='Estado' required={true} placeHolder={estadoUser} value={estadoUser} disable={disable}></InputArea>
-                        <InputArea onChange={valor=>setCidadeUser(valor)} label='Cidade' required={true} placeHolder={cidadeUser} value={cidadeUser} disable={disable}></InputArea>
-                        <InputArea onChange={valor=>setNumeroUser(valor)} label='Número' required={true} placeHolder={numeroUser} value={numeroUser} disable={disable}></InputArea>
-                        <Botao tipo='submit'>Salvar Informações</Botao>
+                        <InputArea onChange={valor=>setEstadoUser(valor)} label='Estado' required={true} placeHolder={estadoUser} value={estadoUser} disable={true}></InputArea>
+                        <InputArea onChange={valor=>setCidadeUser(valor)} label='Cidade' required={true} placeHolder={cidadeUser} value={cidadeUser} disable={true}></InputArea>
+                        <InputArea onChange={valor=>setNumeroUser(valor)} label='Número' required={true} placeHolder={numeroUser} value={numeroUser} disable={true}></InputArea>
+                        <div className='mt-3 w-full flex justify-end'>
+                            <Botao tipo='submit'>Salvar Informações</Botao>
+                        </div>
                     </form>
                 </fieldset>
             </section>

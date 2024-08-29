@@ -35,8 +35,8 @@ const ModalAdicionarCarro = ({isOpen, children, onAddCarro} : ModalAdicionarCarr
     };
 
     return(
-        <dialog ref = {ref} className={`CarroAddModal ${isOpen ? "open":""}`}>
-            <div className="children">{children}</div>
+        <dialog ref = {ref} className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1/4 pr-2 p-5  ${isOpen ? "open":""}`}>
+            <div className="flex items-center justify-center float-right w-7 h-7 rounded-2xl border-2 border-primary shadow-xl">{children}</div>
             <FormAdicionarCarro onCarroCadastrado={handleCarroCadastrado}/>
         </dialog>
     )
