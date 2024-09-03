@@ -26,7 +26,7 @@ const Carros = ({listaCarro} : CarroListProps)=>{
 
     return(
         listaCarros.length > 0?
-        <div className="rounded-xl p-3 border-2 border-primary shadow-xl carros-container">
+        <div className="rounded-xl p-3 border-2 border-gray-500 shadow-xl carros-container">
             <div className="flex justify-between border-b-4 border-gray-500 p-4">
             <h1 className="text-3xl font-bold">Carros</h1>
             </div>
@@ -34,7 +34,9 @@ const Carros = ({listaCarro} : CarroListProps)=>{
                 <div className="w-full flex justify-end">
                 <BtnAdicionarCarro onAddCarro={adicionarLista}/> 
                 </div>
-                {listaCarros.map(carro =><CarroCard key={carro.modelo} carro = {carro} nome = {carro.modelo}/>)} 
+                <div className="flex flex-row gap-1	">
+                    {listaCarros.map(carro =><CarroCard key={carro.modelo} carro = {carro} nome = {carro.modelo}/>)} 
+                </div>
             </div>
         </div>:
         <div className="border-2 rounded-xl shadow-xl p-4 w-full flex flex-col carros-container">

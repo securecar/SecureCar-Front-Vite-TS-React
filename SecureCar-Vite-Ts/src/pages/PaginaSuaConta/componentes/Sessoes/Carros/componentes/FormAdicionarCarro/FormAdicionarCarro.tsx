@@ -28,6 +28,13 @@ const FormAdicionarCarro = ({onCarroCadastrado} : FormAdicionarCarro) =>{
             placa,
             seguro
         };
+        setModelo("");
+        setMarca("");
+        setAno("");
+        setChassi("");
+        setQuilometragem("");
+        setPlaca("");
+        setSeguro("");
         
         onCarroCadastrado(novoCarro);
     };
