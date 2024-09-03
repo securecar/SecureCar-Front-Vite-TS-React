@@ -5,7 +5,7 @@ import profile from "@/assets/icons/profile-pic.svg";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 flex justify-between bg-primary items-center px-4 py-4 ">
+    <header className="z-20 sticky mg-[71px] top-0 flex justify-between bg-primary items-center px-4 py-4 ">
       <Link to={"../../pages/PaginaInicial/PaginaInicial"}>
         <img src={logo} className="h-[40px] hover:scale-110 transition brightness-0 saturate-100 invert" />
       </Link>
