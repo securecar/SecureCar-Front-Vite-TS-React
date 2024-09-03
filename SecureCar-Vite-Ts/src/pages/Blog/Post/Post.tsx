@@ -1,14 +1,17 @@
+import TagPost, { tagPostProps } from "./TagPost/TagPost"
+
 type PostProps = {
     isMainPost? : boolean,
     titulo : string,
     dataCriacao : string,
-    tagPost?: "Technology" | "Security" | "Car"
-} & imagemPostProps & authorPostProps
+} & imagemPostProps & authorPostProps & tagPostProps
 
 type imagemPostProps = {
     imagem : string,
     descImagem? : string,
 }
+
+
 
 type authorPostProps = {
     autor : string,
@@ -24,6 +27,7 @@ const Post = ({isMainPost, imagem, titulo, autorImagem, autor, dataCriacao, desc
             : 
             <div>
                 <img src={imagem} alt={descImagem ? descImagem : ''} />
+                <TagPost tagPost={tagPost} />
                 
             </div>
             }  
