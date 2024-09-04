@@ -37,13 +37,6 @@ const PaginaSuaConta = ()=>{
         return; 
     }
 
-    function setBotoes(config : boolean, acessibilidade : boolean, endereco : boolean, carros : boolean){
-        if(config != undefined){
-
-            return;
-        } 
-        return;
-    }
 
 
     let listaCarro : [] = []
