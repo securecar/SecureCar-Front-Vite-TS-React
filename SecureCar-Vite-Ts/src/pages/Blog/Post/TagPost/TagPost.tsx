@@ -4,13 +4,13 @@ export type tagPostProps = {
 const TagPost = ({tagPost} : tagPostProps) => {
 
   const colorVariants = {
-    "Technology" : "bg-[#f6f7ff] text-[#4B6BFB] rounded",
-    "Security" : "bg-[#f6f7ff] text-[#4B6BFB] rounded",
-    "Car" : "bg-[#f6f7ff] text-[#4B6BFB] rounded",
+    "Technology" : "flex self-start bg-[#f6f7ff] text-[#4B6BFB] rounded w-max px-2 py-1 font-semibold ",
+    "Security" : "flex self-start bg-[#f6f7ff] text-[#4B6BFB] rounded w-max px-2 py-1 font-semibold ",
+    "Car" : "flex self-start bg-[#f6f7ff] text-[#4B6BFB] rounded w-max px-2 py-1 font-semibold ",
   }
   
   return (
-    <div  className={`${tagPost ? colorVariants[tagPost] : 'bg-[#f6f7ff] text-black rounded'}`}>{tagPost ? tagPost : 'Undefined'}</div>
+    <div  className={`${tagPost ? colorVariants[tagPost] : 'flex self-start bg-[#f6f7ff] text-black rounded w-max px-2 py-1 font-semibold '}`}>{tagPost ? tagPost : 'Undefined'}</div>
   )
 }
 
