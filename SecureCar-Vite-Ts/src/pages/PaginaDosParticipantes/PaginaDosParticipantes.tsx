@@ -1,13 +1,15 @@
-import Footer from "@/componentes/Folder/Footer"
-import Header from "@/componentes/Header/Header"
+type Integrantes = {
+    nome:string;
+    rm:number;
+    turma:string;
+    github:string;
+}
 
 const PaginaDosParticipantes = ()=>{
 
     return(
         <>
-        <Header/>
         <h1>Pagina dos Participantes</h1>
-        <Footer/>
         </>
     )
 }
