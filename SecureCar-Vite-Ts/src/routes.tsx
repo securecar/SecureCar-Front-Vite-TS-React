@@ -7,6 +7,7 @@ import PaginaInicial from "./pages/PaginaInicial/PaginaInicial";
 import PaginaNovidades from "./pages/PaginaNovidades/PaginaNovidades";
 import PaginaRegistroLogin from "./pages/PaginaRegistroLogin/PaginaRegistroLogin";
 import PaginaSuaConta from "./pages/PaginaSuaConta/PaginaSuaConta";
+import PaginaDosParticipantes from "./pages/PaginaDosParticipantes/PaginaDosParticipantes";
 import Blog from "./pages/Blog/Blog";
 
 export const routes = createBrowserRouter([
@@ -18,6 +19,7 @@ export const routes = createBrowserRouter([
         {path:'/pages/PaginaNovidades/PaginaNovidades',element:<PaginaNovidades/>},
         {path:'/pages/PaginaChatBot/PaginaChatBot',element:<PaginaChatBot/>},
         {path:'/pages/PaginaSuaConta/PaginaSuaConta',element:<PaginaSuaConta/>},
+        {path:'/pages/PaginaDosParticipantes/PaginaDosParticipantes',element:<PaginaDosParticipantes/>},
         {path: '/blog', element: <Blog/>}
       ]
     }
