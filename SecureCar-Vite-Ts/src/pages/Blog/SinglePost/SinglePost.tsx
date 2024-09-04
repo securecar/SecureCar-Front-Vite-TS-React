@@ -2,11 +2,6 @@ import {PostProps } from "../Post/Post";
 import TagPost from "../Post/TagPost/TagPost";
 import DOMPurify from "dompurify";
 
-// import DOMPurify from 'dompurify'; // Remove the unused import statement
-
-// Run the following command in the terminal to install the type declaration file for dompurify
-// npm i --save-dev @types/dompurify
-
 type SinglePost = {
   descricao: string;
   conteudo: string;
