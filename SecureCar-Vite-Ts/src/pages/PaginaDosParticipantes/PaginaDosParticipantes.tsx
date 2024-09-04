@@ -1,3 +1,5 @@
+import Integrantes from "./componentes/Integrantes/Integrantes";
+
 type Integrantes = {
     nome:string;
     rm:number;
@@ -35,6 +37,7 @@ const integrantes:Integrantes[] = [
     return(
         <>
         <h1>Pagina dos Participantes</h1>
+        <Integrantes integrante={integrantes}/>
         </>
     )
 }
