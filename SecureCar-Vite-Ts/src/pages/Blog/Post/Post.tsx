@@ -22,7 +22,7 @@ const Post = ({isMainPost, imagem, titulo, autorImagem, autor, dataCriacao, desc
             ? 
             <div className="w-full bg-white">
                 <img className="w-full h-[600px] object-cover rounded-xl m-auto " src={imagem} alt={descImagem}/>
-                <div className="relative bg-white z-10 p-10 flex flex-col w-2/5 justify-start -mt-60 ml-24 h-max rounded-xl shadow-md mb-4 hover:cursor-pointer hover:scale-105 transition-all duration-500">
+                <div className="relative bg-white p-10 flex flex-col w-2/5 justify-start -mt-60 ml-24 h-max rounded-xl shadow-md mb-4 hover:cursor-pointer hover:scale-105 transition-all duration-500">
                     <TagPost tagPost={tagPost} />
                     <h2 className="text-black text-4xl font-semibold py-4">{titulo}</h2>
                     <div className="post-details flex gap-3 justify-start py-4 items-center w-full">
