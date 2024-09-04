@@ -1,26 +1,27 @@
 import TagPost, { tagPostProps } from "./TagPost/TagPost"
 
 export type PostProps = {
+    idPost : number,
     isMainPost? : boolean,
     titulo : string,
     dataCriacao : string,
 } & imagemPostProps & authorPostProps & tagPostProps
 
-type imagemPostProps = {
+export type imagemPostProps = {
     imagem : string,
     descImagem? : string,
 }
-type authorPostProps = {
+export type authorPostProps = {
     autor : string,
     autorImagem : string
 }
 
-const Post = ({isMainPost, imagem, titulo, autorImagem, autor, dataCriacao, descImagem, tagPost} : PostProps) => {
+const Post = ({idPost, isMainPost, imagem, titulo, autorImagem, autor, dataCriacao, descImagem, tagPost} : PostProps) => {
     return(
         <>  
             {isMainPost 
             ? 
-            <div className="w-full bg-white">
+            <div className="w-full bg-white" data-id={idPost}>
                 <img className="w-full h-[600px] object-cover rounded-xl m-auto " src={imagem} alt={descImagem}/>
                 <div className="relative bg-white p-10 flex flex-col w-2/5 justify-start -mt-60 ml-24 h-max rounded-xl shadow-md mb-4 hover:cursor-pointer hover:scale-105 transition-all duration-500">
                     <TagPost tagPost={tagPost} />
@@ -37,7 +38,7 @@ const Post = ({isMainPost, imagem, titulo, autorImagem, autor, dataCriacao, desc
                 </div>
             </div> 
             : 
-            <div className="bg-white border border-[#c5c5c6] p-4 rounded-xl min-h-96 max-w-[400px] m-auto flex flex-col justify-center items-center hover:scale-105 hover:cursor-pointer transition-all duration-500">
+            <div className="bg-white border border-[#c5c5c6] p-4 rounded-xl min-h-96 max-w-[400px] m-auto flex flex-col justify-center items-center hover:scale-105 hover:cursor-pointer transition-all duration-500" data-id={idPost}>
                 <img className="h-[240px] w-[360px] rounded object-cover my-2 object-top" src={imagem} alt={descImagem} />
                 <TagPost tagPost={tagPost} />
                 <h3 className="text-black text-2xl font-semibold py-4">{titulo}</h3>
