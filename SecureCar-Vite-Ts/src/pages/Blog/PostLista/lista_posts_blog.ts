@@ -2,6 +2,7 @@ import { PostProps } from "../Post/Post";
 
 export const ListaPostsBlog: PostProps[] = [
   {
+    idPost: 1,
     titulo:
       "The Impact of Technology on the Workplace: How Technology is Changing",
     dataCriacao: "September 15, 2021",
@@ -14,6 +15,7 @@ export const ListaPostsBlog: PostProps[] = [
     tagPost: "Technology",
   },
   {
+    idPost: 2,
     titulo:
       "The Impact of Technology on the Workplace: How Technology is Changing",
     dataCriacao: "September 15, 2021",
@@ -26,6 +28,7 @@ export const ListaPostsBlog: PostProps[] = [
     tagPost: "Technology",
   },
   {
+    idPost: 3,
     titulo:
       "The Impact of Technology on the Workplace: How Technology is Changing",
     dataCriacao: "September 15, 2021",
@@ -38,6 +41,7 @@ export const ListaPostsBlog: PostProps[] = [
     tagPost: "Technology",
   },
   {
+    idPost: 4,
     titulo:
       "The Impact of Technology on the Workplace: How Technology is Changing",
     dataCriacao: "September 15, 2021",
@@ -50,6 +54,7 @@ export const ListaPostsBlog: PostProps[] = [
     tagPost: "Technology",
   },
   {
+    idPost: 5,
     titulo:
       "The Impact of Technology on the Workplace: How Technology is Changing",
     dataCriacao: "September 15, 2021",
@@ -62,6 +67,7 @@ export const ListaPostsBlog: PostProps[] = [
     tagPost: "Technology",
   },
   {
+    idPost: 6,
     titulo:
       "The Impact of Technology on the Workplace: How Technology is Changing",
     dataCriacao: "September 15, 2021",
