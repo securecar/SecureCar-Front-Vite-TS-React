@@ -5,6 +5,7 @@ import Testemunhos from "@/componentes/Testemunhos/testemunhos";
 import ListaDeTestemunhos from "./lista_testemunhos";
 
 
+
 const PaginaInicial = () => {
   return (
     <>
@@ -56,6 +57,7 @@ const PaginaInicial = () => {
         </div>
       </section>
       <Testemunhos key={"testemunhos"} lista_testemunhos={ListaDeTestemunhos}/>
+      
     </>
   );
 };

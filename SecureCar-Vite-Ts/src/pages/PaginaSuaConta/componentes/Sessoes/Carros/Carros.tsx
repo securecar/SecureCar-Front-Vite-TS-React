@@ -27,7 +27,7 @@ const Carros = ({listaCarro} : CarroListProps)=>{
     return(
         listaCarros.length > 0?
         <div className="rounded-xl p-3 border-2 border-gray-500 shadow-xl carros-container">
-            <div className="flex justify-between border-b-4 border-gray-500 p-4">
+            <div className="flex justify-between border-b-4 mb-4 border-gray-500 p-4">
             <h1 className="text-3xl font-bold">Carros</h1>
             </div>
             <div className="h-80 w-full flex flex-col"> 
@@ -40,11 +40,11 @@ const Carros = ({listaCarro} : CarroListProps)=>{
             </div>
         </div>:
         <div className="border-2 rounded-xl shadow-xl p-4 w-full flex flex-col carros-container">
-            <div className="flex justify-between border-b-4 border-gray-500 p-4">
+            <div className={`flex justify-between ${listaCarros.length >0?"border-b-4":""} border-gray-500 p-4`}>
                 <h1 className="text-3xl font-bold">Carros</h1>
             </div>
                 <div className="h-80 w-full flex justify-center items-center flex-col">
-                    <h2 className="font-semibold text-xl mb-10">Você ainda não possui nenhum carro Cadastrado</h2>
+                    <h2 className="font-semibold text-2xl mb-10 text-gray-500">Você ainda não possui nenhum carro Cadastrado!</h2>
                     <BtnAdicionarCarro onAddCarro={adicionarLista}/>
                 </div>
             </div>
