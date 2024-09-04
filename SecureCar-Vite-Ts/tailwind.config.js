@@ -21,6 +21,15 @@ export default {
         inter: ['Inria Serif', 'sans-serif'],
       },
     },
+    borderRadius : {
+      'none': '0',
+      DEFAULT: '0.25rem',
+      'sm': '0.125rem',
+      'md': '0.375rem',
+      'lg': '0.5rem',
+      'full': '9999px',
+      'xl' : '30px'
+    }
   },
   plugins: [],
 }
