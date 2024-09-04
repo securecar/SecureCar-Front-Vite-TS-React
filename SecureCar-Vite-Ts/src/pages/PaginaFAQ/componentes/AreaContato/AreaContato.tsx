@@ -14,7 +14,7 @@ const AreaContato = ()=>{
             <form className="h-full flex flex-col gap-y-2" action="">
                 <InputArea label="Email" required={true} placeHolder="Digite o seu email aqui"/>
                 <label className="mt-3 font-semibold text-lg">Digite a sua duvida aqui!</label>
-                <textarea className="rounded-xl p-3 border-2 min-h-32 max-h-52 border-primary shadow-xl" name="Mensagem" id="mensagem"></textarea>
+                <textarea placeholder="Digite sua mensagem aqui" className="rounded-xl p-3 border-2 min-h-32 max-h-52 border-primary shadow-xl" name="Mensagem" id="mensagem"></textarea>
                 <div className="flex w-full items-center justify-center">
                     <Botao tipo="submit">Enviar mensagem!</Botao>
                 </div>
