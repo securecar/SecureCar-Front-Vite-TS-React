@@ -12,6 +12,15 @@ const lista_help : HelpCardProps[]=[
     },{
         header:"",
         conteudo:""
+    },{
+        header:"",
+        conteudo:""
+    },{
+        header:"",
+        conteudo:""
+    },{
+        header:"",
+        conteudo:""
     }
     
 ]
