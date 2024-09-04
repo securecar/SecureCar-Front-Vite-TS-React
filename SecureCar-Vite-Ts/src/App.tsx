@@ -7,11 +7,13 @@ import {Outlet} from "react-router-dom";
 const App = ()=> {
 
   return (
-    <>
+    <div>
     <Header/>
-    <Outlet/>
+    <div className='min-h-screen pb-16'>
+      <Outlet/>
+    </div>
     <Footer/>
-    </>
+    </div>
   )
 }
 
