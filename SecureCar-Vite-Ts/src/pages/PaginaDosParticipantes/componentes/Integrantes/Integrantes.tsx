@@ -17,7 +17,7 @@ export default function Integrantes({ integrante }: { integrante: Integrantes[] 
                         <p>RM: {itg.rm}</p>
                         <p>Turma: {itg.turma}</p>
                         <p><a href={itg.github} target="_blank" rel="noopener noreferrer">{itg.github}</a></p>
-                    </li>
+                    </li>   
                 ))}
             </ul>
         </div>
