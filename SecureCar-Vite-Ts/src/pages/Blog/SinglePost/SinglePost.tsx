@@ -1,7 +1,7 @@
 import {PostProps } from "../Post/Post";
 import TagPost from "../Post/TagPost/TagPost";
 import DOMPurify from "dompurify";
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { ListaPostsBlog } from "../PostLista/lista_posts_blog";
 import styles from "./SinglePost.module.css"
 //:id
@@ -12,9 +12,9 @@ export type SinglePost = {
 const SinglePost = () => {
   const { idPost: postId } = useParams<{ idPost: string }>();
   const post = ListaPostsBlog.find((p: PostProps) => p.idPost.toString() === postId);
-
-  const navigate = useNavigate()
-  navigate('')
+  //useNavigate
+  // const navigate = useNavigate()
+  // navigate('')
   if (!post) {
     return <div>Post not found</div>;
   }
