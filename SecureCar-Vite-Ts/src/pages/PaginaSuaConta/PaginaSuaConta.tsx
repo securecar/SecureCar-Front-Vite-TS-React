@@ -7,7 +7,7 @@ import Endereco from "./componentes/Sessoes/Endereço/Endereco";
 
 const PaginaSuaConta = ()=>{
     
-    const [conteudo,setConteudo] = useState('Suas Configuracoes')
+    const [conteudo,setConteudo] = useState("Suas Configuracoes")
     const [fontSize, setFontSize] = useState("")
     const [suasConfiguracoes, setSuasConfiguracoes] = useState<boolean>()
     const [acessibilidade, setAcessibilidade] = useState<boolean>()
@@ -44,38 +44,38 @@ const PaginaSuaConta = ()=>{
 
     function mudaBotao(nome : string){
         setConteudo(nome)
-        setSuasConfiguracoes(nome== "Suas Configuracoes")
-        setCarros(nome== "Carros")
-        setEndereco(nome== "Endereco")
-        setAcessibilidade(nome== "Acessibilidade")
+        setSuasConfiguracoes(nome === "Suas Configuracoes")
+        setCarros(nome === "Carros")
+        setEndereco(nome === "Endereco")
+        setAcessibilidade(nome === "Acessibilidade")
     }
 
 
     let conteudoChanger = () => {
         switch(conteudo){
-            case('Suas Configuracoes'):
+            case 'Suas Configuracoes':
                 return <SuasConfiguracoes dataNascimento="25/10/1980" nome="gerson bragantino" cpf="123.123.123-12" senha="********" email="gersonbragantino@email.com"/>
-            case('Acessibilidade'):
+            case 'Acessibilidade':
                 return  <Acessibilidade onChangeFonte={changeFonte} onChangeModo={changeModo}/>
-            case('Endereco'):
+            case 'Endereco':
                 return <Endereco nome="gerson bragantino" cep="12312-123" numero="10" cidade="Sao pulo" estado="SP"/>
-            case('Carros'):
+            case 'Carros':
                 return <Carros listaCarro={listaCarro}/>
         }
             
     }
 
     return(
-        <div className={`container flex w-full  ${modo ? "escuro":""}`}>
-            <div className='w-1/3 left'>
-                <nav>
-                    <BtnSessoesPerfil clicado = {suasConfiguracoes} onClick ={ () => mudaBotao("Suas Configuracoes")} name ="Suas Configurações" />
+        <div className={`container flex w-full justify-between ${modo ? "escuro":""}`}>
+            <div className='w-1/4 left '>
+                <nav className="min-h-screen">
+                    <BtnSessoesPerfil clicado = {suasConfiguracoes} onClick ={() => mudaBotao("Suas Configuracoes")} name ="Suas Configurações" />
                     <BtnSessoesPerfil clicado = {acessibilidade} name="Acessibilidade" onClick={() => mudaBotao("Acessibilidade")} />
                     <BtnSessoesPerfil clicado = {endereco} name="Endereço" onClick={() => mudaBotao("Endereco")} />
                     <BtnSessoesPerfil clicado = {carros} name="Carros" onClick={() => mudaBotao("Carros")} />
                 </nav>
             </div>
-            <div className='w-2/3 mt-20 right'>
+            <div className='w-3/4 mt-20 right'>
                 {conteudoChanger()}
             </div>
 

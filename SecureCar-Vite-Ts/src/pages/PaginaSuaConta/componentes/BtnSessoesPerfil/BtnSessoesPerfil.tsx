@@ -5,11 +5,11 @@ type SessoesPerfilProps = {
     clicado : boolean | undefined
 }
 
-const BtnSessoesPerfil = ({clicado, onClick,name} : SessoesPerfilProps) =>{
+const BtnSessoesPerfil = ({clicado, onClick, name} : SessoesPerfilProps) =>{
 
     return(
         <div className="area">
-            <button onClick={()=> onClick()} className={`${clicado == true ? "bg-primary-dark" : "bg-primary"} w-2/3 h-40 border-b-4 border-primary-dark link`}>{name}</button>
+            <button onClick={()=> onClick()} className={`${clicado == true ? "bg-primary-dark" : "bg-primary"} w-full h-40 border-b-4 border-primary-dark link`}>{name}</button>
         </div>
     )
 }
