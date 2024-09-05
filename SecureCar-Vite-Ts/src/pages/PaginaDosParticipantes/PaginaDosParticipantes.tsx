@@ -27,7 +27,7 @@ const integrantes:Integrantes[] = [
         nome: "Gustavo Dias da Silva Cruz",
         rm: 556448,
         turma:"1TDSPH",
-        github:"github.com/gustavodscruz",
+        github:"https://github.com/gustavodscruz",
         src:gustavo
     },
     {
