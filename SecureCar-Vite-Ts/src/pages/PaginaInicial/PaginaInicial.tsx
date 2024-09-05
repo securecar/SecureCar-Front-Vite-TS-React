@@ -7,6 +7,9 @@ import ListaDeTestemunhos from "./lista_testemunhos";
 
 
 const PaginaInicial = () => {
+
+
+
   return (
     <>
       <div className="w-full h-[200px] bg-primary flex justify-center items-center p-4">

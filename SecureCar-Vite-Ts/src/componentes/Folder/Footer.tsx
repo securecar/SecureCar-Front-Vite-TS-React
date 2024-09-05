@@ -13,11 +13,11 @@ const Footer = () => {
       <p className="text-white text-center text-sm font-bold my-4">&copy; 2024 SecureCar</p>
       <hr className="border-t-2 border-[#6ea6e8] py-4 w-full" />
       <div className="w-full flex gap-4 justify-between items-center">
-      <img src={logo} className="h-[40px] hover:scale-110 transition brightness-0 saturate-100 invert" />
+      <Link to="/"><img src={logo} className="h-[40px] hover:scale-110 transition brightness-0 saturate-100 invert" /></Link>
       <div className="flex gap-4 justify-between items-center">
         <Link className="text-white hover:scale-110 transition hover:text-black font-semibold text-sm" to="/blog">Novidades</Link>
         <Link className="text-white hover:scale-110 transition hover:text-black font-semibold text-sm" to="/help">Help</Link>
-        <Link className="text-white hover:scale-110 transition hover:text-black font-semibold text-sm" to="/quem-somos">Quem Somos</Link>
+        <Link className="text-white hover:scale-110 transition hover:text-black font-semibold text-sm" to="/participantes">Quem Somos</Link>
       </div>
       <div className="flex items-center justify-end w-[172px] gap-4">
         <a href="https://github.com/gustavodscruz"><img src={githubLogo} alt="Github da nossa equipe" /></a>

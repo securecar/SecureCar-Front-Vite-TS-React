@@ -9,19 +9,23 @@ import PaginaRegistroLogin from "./pages/PaginaRegistroLogin/PaginaRegistroLogin
 import PaginaSuaConta from "./pages/PaginaSuaConta/PaginaSuaConta";
 import PaginaDosParticipantes from "./pages/PaginaDosParticipantes/PaginaDosParticipantes";
 import Blog from "./pages/Blog/Blog";
+import SinglePost from "./pages/Blog/SinglePost/SinglePost";
+
 
 export const routes = createBrowserRouter([
     {
       path:'/',element:<App/>, errorElement:<PaginaErro/>,children:[
-        {path:'/',element:<PaginaRegistroLogin/>},
-        {path:'/pages/PaginaInicial/PaginaInicial',element:<PaginaInicial/>},
-        {path:'/pages/PaginaFAQ/PaginaFAQ',element:<PaginaFAQ/>},
-        {path:'/pages/PaginaNovidades/PaginaNovidades',element:<PaginaNovidades/>},
-        {path:'/pages/PaginaChatBot/PaginaChatBot',element:<PaginaChatBot/>},
-        {path:'/pages/PaginaSuaConta/PaginaSuaConta',element:<PaginaSuaConta/>},
-        {path:'/pages/PaginaDosParticipantes/PaginaDosParticipantes',element:<PaginaDosParticipantes/>},
-        {path: '/blog', element: <Blog/>}
-      ]
-    }
+        {path:'/login',element:<PaginaRegistroLogin/>},
+        {path:'/',element:<PaginaInicial/>},
+        {path:'/faq',element:<PaginaFAQ/>},
+        {path:'/novidades',element:<PaginaNovidades/>},
+        {path:'/chatbot',element:<PaginaChatBot/>},
+        {path:'/conta',element:<PaginaSuaConta/>},
+        {path:'/participantes',element:<PaginaDosParticipantes/>},
+        {path: '/blog', element: <Blog/>},
+        {path: '/blog/:idPost', element: <SinglePost />}
+      ],
+    },
+      
   ])
   
