@@ -9,7 +9,7 @@ const PaginaSuaConta = ()=>{
     
     const [conteudo,setConteudo] = useState("Suas Configuracoes")
     const [fontSize, setFontSize] = useState("")
-    const [suasConfiguracoes, setSuasConfiguracoes] = useState<boolean>()
+    const [suasConfiguracoes, setSuasConfiguracoes] = useState<boolean>(true)
     const [acessibilidade, setAcessibilidade] = useState<boolean>()
     const [carros, setCarros] = useState<boolean>()
     const [endereco, setEndereco] = useState<boolean>()
@@ -66,16 +66,16 @@ const PaginaSuaConta = ()=>{
     }
 
     return(
-        <div className={`container flex w-full justify-between ${modo ? "escuro":""}`}>
-            <div className='w-1/4 left '>
-                <nav className="min-h-screen">
+        <div className={`container flex min-w-full ${modo ? "escuro":""}`}>
+            <div className='w-1/4 left bg-primary min-h-screen'>
+                <nav >
                     <BtnSessoesPerfil clicado = {suasConfiguracoes} onClick ={() => mudaBotao("Suas Configuracoes")} name ="Suas Configurações" />
                     <BtnSessoesPerfil clicado = {acessibilidade} name="Acessibilidade" onClick={() => mudaBotao("Acessibilidade")} />
                     <BtnSessoesPerfil clicado = {endereco} name="Endereço" onClick={() => mudaBotao("Endereco")} />
                     <BtnSessoesPerfil clicado = {carros} name="Carros" onClick={() => mudaBotao("Carros")} />
                 </nav>
             </div>
-            <div className='w-3/4 mt-20 right'>
+            <div className='w-3/4 flex justify-center right px-10 py-6 h-4/5'>
                 {conteudoChanger()}
             </div>
 
