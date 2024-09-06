@@ -20,7 +20,7 @@ const SinglePost = () => {
   }
   const sanitizedContent = DOMPurify.sanitize(post.conteudo);
   return (
-    <div className="max-w-screen-lg flex flex-col gap-5 m-auto py-5" style={styles}>
+    <div className="max-w-screen-lg flex flex-col gap-5 m-auto py-5 " style={styles}>
       <img
         className="w-full object-cover max-h-[500px] rounded object-top"
         src={post.imagem}
@@ -34,7 +34,7 @@ const SinglePost = () => {
         <p className="text-sm font-semibold text-gray-500">{post.autor}</p>
         <p className="text-sm font-semibold text-gray-500">{post.dataCriacao}</p>
       </div>
-      <div className="text-black text-lg leading-snug gap-4 blog-content" dangerouslySetInnerHTML={{ __html: sanitizedContent }} />
+      <div className="text-black text-lg leading-snug gap-4 blog-content *:leading-snug group-[h3]:font-semibold" dangerouslySetInnerHTML={{ __html: sanitizedContent }} />
     </div>
   );
 };
