@@ -73,7 +73,7 @@ const PaginaSuaConta = ()=>{
 
     return(
         <div className={`container tablet:flex-col flex min-w-full ${modo ? "escuro":""}`}>
-            <div className='w-1/4 tablet:w-full tablet:flex-row left border-t-4 border-primary-dark  bg-primary tela:min-h-screen tablet:min-h-auto'>
+            <div className='w-1/4 tablet:w-full tablet:flex-row left border-t-4 tablet:border-primary tela:border-primary-dark tela:min-h-screen tablet:min-h-auto'>
                 <BtnSessoesPerfil clicaImagem={Volta} clicado = {suasConfiguracoes} onClick ={() => mudaBotao("Suas Configuracoes")} name ="Suas Configurações" />
                 <BtnSessoesPerfil clicaImagem={Volta} clicado = {acessibilidade} name="Acessibilidade" onClick={() => mudaBotao("Acessibilidade")} />
                 <BtnSessoesPerfil clicaImagem={Volta} clicado = {endereco} name="Endereço" onClick={() => mudaBotao("Endereco")} />
