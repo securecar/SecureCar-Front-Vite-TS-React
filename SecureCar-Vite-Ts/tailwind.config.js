@@ -30,6 +30,11 @@ export default {
       'full': '9999px',
       'xl' : '12px',
       'custom-xl' : '30px'
+    },
+    screens:{
+      'celular' : {'max':'550px'},
+      'tablet' : {'max':'819px'},
+      'tela': {'min': '820px'},
     }
   },
   plugins: [],
