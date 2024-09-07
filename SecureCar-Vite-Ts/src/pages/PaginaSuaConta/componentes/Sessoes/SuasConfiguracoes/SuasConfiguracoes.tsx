@@ -43,7 +43,7 @@ const SuasConfiguracoes = ({dataNascimento, nome,cpf,senha,email} : SuasConfigur
     }
 
     return(
-        <div className="border-2 rounded-xl shadow-xl p-4 w-full flex flex-col perfil">
+        <div className="border-2 tablet:w-full rounded-xl shadow-xl p-4 w-full flex flex-col perfil">
             <section className="top">
                 <AreaPerfil nome={nome}/>
             </section>
