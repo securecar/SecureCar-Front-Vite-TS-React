@@ -5,7 +5,7 @@ import linkedinLogo from "@/assets/icons/linkedin.svg"
 
 const Footer = () => {
   return (
-    <div className="w-full bg-primary bottom-0 p-20 flex flex-col ">
+    <div className="w-full static bg-primary bottom-0 p-20 flex flex-col ">
       <p className="text-lg text-[#b7d3f3] tracking-widest text-center">UPGRADE PARA CONSERTOS VEICULARES</p>
       <p className="text-white font-semibold text-5xl text-center my-4">Quer Saber Mais?</p>
       <p className="text-[#dbe9f9] text-center font-semibold text-lg my-5">SecureCar promete lhe ajudar, para consertar seu carro, gerenciar suas tarefas e promover seus serviços.</p>
