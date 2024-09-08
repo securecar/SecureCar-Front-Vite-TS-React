@@ -9,7 +9,7 @@ const App = ()=> {
   return (
     <div>
     <Header/>
-    <div className='min-h-screen pb-2'>
+    <div className='tela:min-h-screen  pb-2'>
       <Outlet/>
     </div>
     <Footer/>
