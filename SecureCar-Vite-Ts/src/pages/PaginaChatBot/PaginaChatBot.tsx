@@ -4,14 +4,16 @@ const PaginaChatBot = ()=>{
 
     return(
         <>
-            <div className="min-h-screen flex flex-col p-0 items-center">
+            <div className="min-h-full flex  items-end  justify-between w-full ">
                 <Historico />
-                <div className="w-[90rem] flex py-2 px-4 justify-between rounded-custom-xlg border-primary shadow-md border-4 h-max absolute bottom-0 ">
-                    <input className="w-[97.5%] p-3 outline-none placeholder:text-2xl placeholder:font-medium placeholder:text-black mr-2 just" type="text" placeholder="Digite aqui" />
-                    <div className=" flex justify-center items-center cursor-pointer hover:scale-105 transition-all duration-300 w-[2.5%] p-1">
-                        <img className="w-full" src={sendBtnIcon} alt="Imagem de enviar mensagem" />
+                <div className="flex min-h-full w-full pb-2 justify-center bottom-0 relative">
+                    <div className="w-3/5 flex py-2 px-4 justify-between rounded-custom-xlg border-primary shadow-md border-4 h-max  bottom-0 ">
+                        <input className="w-11/12 p-3 outline-none placeholder:text-2xl placeholder:font-medium placeholder:text-black mr-2 just" type="text" placeholder="Digite aqui" />
+                        <div className=" flex justify-center items-center cursor-pointer hover:scale-105 transition-all duration-300 w-1/12 p-1">
+                            <img className="w-full h-10" src={sendBtnIcon} alt="Imagem de enviar mensagem" />
+                        </div>
                     </div>
-                </div>  
+                </div>
             </div>
         </>
     )
