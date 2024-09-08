@@ -29,7 +29,8 @@ export default {
       'lg': '0.5rem',
       'full': '9999px',
       'xl' : '12px',
-      'custom-xl' : '30px'
+      'custom-xl' : '30px',
+      'custom-xlg' : '20px',
     }
   },
   plugins: [],

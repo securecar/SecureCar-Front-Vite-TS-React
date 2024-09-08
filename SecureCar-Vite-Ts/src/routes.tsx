@@ -23,7 +23,8 @@ export const routes = createBrowserRouter([
         {path:'/conta',element:<PaginaSuaConta/>},
         {path:'/participantes',element:<PaginaDosParticipantes/>},
         {path: '/blog', element: <Blog/>},
-        {path: '/blog/:idPost', element: <SinglePost />}
+        {path: '/blog/:idPost', element: <SinglePost />},
+        {path: '/chatbot', element: <PaginaChatBot />}
       ],
     },
       
