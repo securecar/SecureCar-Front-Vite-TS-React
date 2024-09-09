@@ -19,7 +19,7 @@ const FormLogin = ({usuarios}: FormLoginProps)=>{
         e.preventDefault();
         console.log(inputCPF)
         console.log(inputSenha)
-        let userFound = false;
+        let usuarioAchado = false;
         for(let x = 0; x < usuarios.length; x++){
             let user = usuarios[x];
             if(user.CPF === inputCPF && user.Senha === inputSenha){
@@ -27,11 +27,11 @@ const FormLogin = ({usuarios}: FormLoginProps)=>{
                 setInputCPF("");
                 setInputSenha("");
                 console.log("Logado");
-                userFound = true;
+                usuarioAchado = true;
                 break;
             }
         }
-        if (!userFound) {
+        if (!usuarioAchado) {
             console.log("Nenhum user encontrado");
         }
     }

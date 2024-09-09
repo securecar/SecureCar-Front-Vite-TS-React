@@ -4,7 +4,7 @@ import logo from "@/assets/imgs/logo_porto.svg";
 import profile from "@/assets/icons/profile-pic.svg";
 
 const Header = () => {
-  const login = sessionStorage.getItem('logged') 
+  const login = sessionStorage.getItem('Logado') 
   return (
     <header className="z-20 sticky mg-[71px] top-0 flex justify-between bg-primary items-center px-4 py-4 ">
       <Link to={"/"}>
