@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import SidebarHistorico from "./SidebarHistorico/SidebarHistorico"
 import { useState } from "react"
 const Historico = () => {
-  const [viewHistory, setViewHistory] = useState(false)
+  const [viewHistory, setViewHistory] = useState(true)
   const toggleViewHistory = () => {
     setViewHistory(!viewHistory)
   } 
