@@ -2,23 +2,20 @@ import { useState } from "react"
 import FormLogin from "./componentes/FormLogin/FormLogin"
 import FormRegistro from "./componentes/FormRegistro/FormRegisto"
 
+export type Usuario = {
+    Nome: string;
+    Email: string;
+    Senha: string;
+    CPF: string;
+    Endereco: string;
+    CEP: string;
+    Telefone: string;
+};
 
+const lista_user: Usuario[] = []
 const PaginaRegistroLogin = () => {
 
     const [conteudo, setConteudo] = useState('Cadastro')
-
-    const lista_user: Usuario[] = []
-
-    type Usuario = {
-        Nome: string;
-        Email: string;
-        Senha: string;
-        CPF: string;
-        Endereco: string;
-        CEP: string;
-        Telefone: string;
-    };
-
 
     function cadastrar(inputNome: string, inputEmail: string, inputSenha: string, inputSenhaAux: string, inputCPF: string, inputEndereco: string, inputCEP: string, inputTelefone: string):void {
             const usuario: Usuario = {
@@ -39,7 +36,7 @@ const PaginaRegistroLogin = () => {
             case 'Cadastro':
                 return <FormRegistro onSubmit={cadastrar} />
             case 'Login':
-                return <FormLogin />
+                return <FormLogin usuarios={lista_user}/>
         }
     }
 
