@@ -11,7 +11,7 @@ const Footer = () => {
       <p className="text-[#dbe9f9] text-center font-semibold text-lg my-5">SecureCar promete lhe ajudar, para consertar seu carro, gerenciar suas tarefas e promover seus serviços.</p>
       <button className="bg-[#0081fe] py-5 px-11 rounded-custom-xl text-white text-[16px] w-max self-center my-5 hover:scale-110 transition-all duration-500 shadow-sm hover:bg-white hover:text-[#0081fe] ">Fale Conosco</button>
       <p className="text-white text-center text-sm font-bold my-4">&copy; 2024 SecureCar</p>
-      <hr className="border-t-2 border-[#6ea6e8] py-4 w-full" />
+      <hr className="border-t-2 border-[#6ea6e8] py-4 w-full" ></hr>
       <div className="w-full flex gap-4 justify-between items-center">
       <Link to="/"><img src={logo} className="h-[40px] hover:scale-110 transition brightness-0 saturate-100 invert" /></Link>
       <div className="flex gap-4 justify-between items-center">

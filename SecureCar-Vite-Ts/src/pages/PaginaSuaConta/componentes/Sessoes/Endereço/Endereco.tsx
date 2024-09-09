@@ -42,7 +42,7 @@ const Endereco = ({nome,cep,numero,cidade,estado} : EnderecoProps)=>{
     }
 
     return(
-        <div className="border-2 rounded-xl shadow-xl p-4 w-full flex flex-col Endereco">
+        <div className="border-2 tablet:w-full rounded-xl shadow-xl p-4 w-full flex flex-col Endereco">
             <section className="top">
                 <AreaPerfil nome={nome}/>
             </section>

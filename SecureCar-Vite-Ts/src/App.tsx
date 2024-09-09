@@ -8,12 +8,14 @@ import {Outlet} from "react-router-dom";
 const App = ()=> {
 
   return (
-    <>
+    <div>
     <Header/>
-    <Outlet/>
     <Chatbot />
+    <div className='min-h-screen pb-2'>
+      <Outlet/>
+    </div>
     <Footer/>
-    </>
+    </div>
   )
 }
 
