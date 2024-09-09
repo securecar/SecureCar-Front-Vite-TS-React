@@ -1,17 +1,21 @@
-import './App.css'
+import { Outlet } from "react-router-dom";
+import './App.css';
+import Chatbot from './componentes/Chatbot/Chatbot';
 import Footer from './componentes/Folder/Footer';
-import Header from './componentes/Header/Header'
-import {Outlet} from "react-router-dom";
+import Header from './componentes/Header/Header';
 
 
-const App = ()=> {
+const App = () => {
 
   return (
-    <>
-    <Header/>
-    <Outlet/>
-    <Footer/>
-    </>
+    <div>
+      <Header />
+      <div className='tela:min-h-screen  pb-2'>
+        <Outlet />
+      </div>
+      <Chatbot />
+      <Footer />
+    </div>
   )
 }
 

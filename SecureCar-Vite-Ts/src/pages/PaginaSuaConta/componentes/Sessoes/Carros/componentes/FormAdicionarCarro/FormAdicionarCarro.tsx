@@ -84,7 +84,7 @@ const FormAdicionarCarro = ({onCarroCadastrado} : FormAdicionarCarro) =>{
                 label = "Seguro"
                 placeHolder = "Digite a seguro do seu carro aqui"/>
                 <div className="mt-3 flex justify-end BtnSubmit-area">
-                <Botao tipo="submit"><img className="w-10" src={imgAdd} alt="Imagem de adicionar"/> Adicionar Carro</Botao>
+                <Botao tipo="submit">Adicionar Carro</Botao>
                 </div>
             </form>
         </fieldset>

@@ -5,11 +5,12 @@ import Acessibilidade from "./componentes/Sessoes/Acessibilidade/Acessibilidade"
 import SuasConfiguracoes from "./componentes/Sessoes/SuasConfiguracoes/SuasConfiguracoes";
 import Endereco from "./componentes/Sessoes/Endereço/Endereco";
 
+
 const PaginaSuaConta = ()=>{
     
-    const [conteudo,setConteudo] = useState('Suas Configuracoes')
+    const [conteudo,setConteudo] = useState("Suas Configuracoes")
     const [fontSize, setFontSize] = useState("")
-    const [suasConfiguracoes, setSuasConfiguracoes] = useState<boolean>()
+    const [suasConfiguracoes, setSuasConfiguracoes] = useState<boolean>(true)
     const [acessibilidade, setAcessibilidade] = useState<boolean>()
     const [carros, setCarros] = useState<boolean>()
     const [endereco, setEndereco] = useState<boolean>()
@@ -40,42 +41,45 @@ const PaginaSuaConta = ()=>{
 
 
     let listaCarro : [] = []
-
-
     function mudaBotao(nome : string){
         setConteudo(nome)
-        setSuasConfiguracoes(nome== "Suas Configuracoes")
-        setCarros(nome== "Carros")
-        setEndereco(nome== "Endereco")
-        setAcessibilidade(nome== "Acessibilidade")
+        setSuasConfiguracoes(nome === "Suas Configuracoes")
+        setCarros(nome === "Carros")
+        setEndereco(nome === "Endereco")
+        setAcessibilidade(nome === "Acessibilidade")
     }
 
+    function Volta() {
+        setAcessibilidade(true)
+        setCarros(true)
+        setEndereco(true)
+        setSuasConfiguracoes(true)
+        setConteudo("")
+    }
 
     let conteudoChanger = () => {
         switch(conteudo){
-            case('Suas Configuracoes'):
+            case 'Suas Configuracoes':
                 return <SuasConfiguracoes dataNascimento="25/10/1980" nome="gerson bragantino" cpf="123.123.123-12" senha="********" email="gersonbragantino@email.com"/>
-            case('Acessibilidade'):
+            case 'Acessibilidade':
                 return  <Acessibilidade onChangeFonte={changeFonte} onChangeModo={changeModo}/>
-            case('Endereco'):
+            case 'Endereco':
                 return <Endereco nome="gerson bragantino" cep="12312-123" numero="10" cidade="Sao pulo" estado="SP"/>
-            case('Carros'):
+            case 'Carros':
                 return <Carros listaCarro={listaCarro}/>
         }
             
     }
 
     return(
-        <div className={`container flex w-full  ${modo ? "escuro":""}`}>
-            <div className='w-1/3 left'>
-                <nav>
-                    <BtnSessoesPerfil clicado = {suasConfiguracoes} onClick ={ () => mudaBotao("Suas Configuracoes")} name ="Suas Configurações" />
-                    <BtnSessoesPerfil clicado = {acessibilidade} name="Acessibilidade" onClick={() => mudaBotao("Acessibilidade")} />
-                    <BtnSessoesPerfil clicado = {endereco} name="Endereço" onClick={() => mudaBotao("Endereco")} />
-                    <BtnSessoesPerfil clicado = {carros} name="Carros" onClick={() => mudaBotao("Carros")} />
-                </nav>
+        <div className={`container tablet:flex-col flex min-w-full ${modo ? "escuro":""}`}>
+            <div className='w-1/4 tablet:w-full tablet:flex-row left border-t-4 tablet:border-primary tela:border-primary-dark tela:min-h-screen tablet:min-h-auto'>
+                <BtnSessoesPerfil clicaImagem={Volta} clicado = {suasConfiguracoes} onClick ={() => mudaBotao("Suas Configuracoes")} name ="Suas Configurações" />
+                <BtnSessoesPerfil clicaImagem={Volta} clicado = {acessibilidade} name="Acessibilidade" onClick={() => mudaBotao("Acessibilidade")} />
+                <BtnSessoesPerfil clicaImagem={Volta} clicado = {endereco} name="Endereço" onClick={() => mudaBotao("Endereco")} />
+                <BtnSessoesPerfil clicaImagem={Volta} clicado = {carros} name="Carros" onClick={() => mudaBotao("Carros")} />
             </div>
-            <div className='w-2/3 mt-20 right'>
+            <div className={`tela:w-3/4 ${suasConfiguracoes ||conteudo === "Acessibilidade" || conteudo === "Endereco" || conteudo === "Carros" ? "tablet:flex flex":"tablet:hidden"} tablet:w-full  justify-center right px-10 py-6 h-4/5`}>
                 {conteudoChanger()}
             </div>
 

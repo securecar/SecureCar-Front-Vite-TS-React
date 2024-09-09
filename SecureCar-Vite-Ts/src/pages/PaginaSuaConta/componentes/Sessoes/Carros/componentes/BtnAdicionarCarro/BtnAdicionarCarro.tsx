@@ -23,7 +23,7 @@ const BtnAdicionarCarro = ({onAddCarro} : btnAdicionarCarroProps) =>{
 
     return(
         <div className="addCarro">
-            <Botao tipo="button" onClick={()=>setShow(true)}><img className="w-10" src={imgAdd} alt="Imagem de adicionar"/> Adicionar Carro</Botao>
+            <Botao img={imgAdd} tipo="button" onClick={()=>setShow(true)}>Adicionar Carro</Botao>
             <ModalAdicionarCarro onAddCarro={handleAddCarro}  isOpen = {show}><button className="btnClose" onClick={()=>setShow(false)}>X</button></ModalAdicionarCarro>
         </div>
     )

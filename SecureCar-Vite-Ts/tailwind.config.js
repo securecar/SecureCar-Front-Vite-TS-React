@@ -29,7 +29,19 @@ export default {
       'lg': '0.5rem',
       'full': '9999px',
       'xl' : '12px',
-      'custom-xl' : '30px'
+      'custom-xl' : '30px',
+      'custom-xlg' : '20px',
+    },
+    screens:{
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+      'celular' : {'max':'550px'},
+      'tablet' : {'max':'819px'},
+      'tela': {'min': '820px'},
+      'tela-xl':{'min' : '820px','max':'1200px'}
     }
   },
   plugins: [],
