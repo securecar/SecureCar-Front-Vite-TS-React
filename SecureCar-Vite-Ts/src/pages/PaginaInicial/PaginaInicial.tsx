@@ -1,12 +1,15 @@
 import help from "@/assets/imgs/help.webp";
 import guincho from "@/assets/imgs/porto-guincho.webp";
 import Testemunhos from "@/componentes/Testemunhos/testemunhos";
-
 import ListaDeTestemunhos from "./lista_testemunhos";
+import Equipe from "@/componentes/Equipe/Equipe";
 
 
 
 const PaginaInicial = () => {
+
+
+
   return (
     <>
       <div className="w-full h-[200px] bg-primary flex justify-center items-center p-4">
@@ -57,7 +60,7 @@ const PaginaInicial = () => {
         </div>
       </section>
       <Testemunhos key={"testemunhos"} lista_testemunhos={ListaDeTestemunhos}/>
-      
+      <Equipe />
     </>
   );
 };
