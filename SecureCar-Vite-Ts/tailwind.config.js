@@ -33,6 +33,11 @@ export default {
       'custom-xlg' : '20px',
     },
     screens:{
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
       'celular' : {'max':'550px'},
       'tablet' : {'max':'819px'},
       'tela': {'min': '820px'},
