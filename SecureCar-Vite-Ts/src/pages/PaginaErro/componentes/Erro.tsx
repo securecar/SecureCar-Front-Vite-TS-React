@@ -9,7 +9,8 @@ export default function Erro() {
             <p className="text-2xl font-bold">Você pode tentar resolver isso clicando</p> 
             <p className="text-2xl font-bold">em algum dos links acima ou no</p> 
             <p className="text-2xl font-bold">botão abaixo!</p>
-            <div className="m-10">
+            <iframe src="https://lottie.host/embed/4b5ecd27-58e4-452e-957d-75e9dbf3fba7/nMlkBxD8SR.json" className="pt-3"></iframe>
+            <div className="m-6">
                 <Link to={"/"}>
                 <Botao tipo="button">Inicio</Botao>
                 </Link>
