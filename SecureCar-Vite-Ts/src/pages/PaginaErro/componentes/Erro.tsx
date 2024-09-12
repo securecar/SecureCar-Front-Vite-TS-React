@@ -13,8 +13,7 @@ export default function Erro() {
                     <Botao tipo="button">Inicio</Botao>
                     </Link>
                 </div>
-                <p className="font-bold text-lg">Caso isso não funcione verifique sua </p>
-                <p className="font-bold text-lg">conexão com a internet</p>
+                <p className="font-bold text-lg text-center">Caso isso não funcione verifique sua conexão com a internet</p>
             </div>
         </div> 
     );
