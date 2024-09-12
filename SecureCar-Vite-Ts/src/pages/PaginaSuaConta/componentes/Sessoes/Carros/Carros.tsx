@@ -1,5 +1,5 @@
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 import BtnAdicionarCarro from "./componentes/BtnAdicionarCarro/BtnAdicionarCarro";
 import { Carro } from "../../../../../assets/TiposPadroes/Carro";
