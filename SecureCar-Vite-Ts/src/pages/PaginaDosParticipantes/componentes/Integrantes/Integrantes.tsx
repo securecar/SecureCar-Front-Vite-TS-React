@@ -8,7 +8,7 @@ type Integrantes = {
 
 export default function Integrantes({ integrante }: { integrante: Integrantes[] }) {
     return (
-        <div className="">
+        <div className="w-4/6">
             <ul>
                 {integrante.map((itg) => (
                     <li key={itg.rm} className="flex flex-row items-center space-x-10 pb-4">
