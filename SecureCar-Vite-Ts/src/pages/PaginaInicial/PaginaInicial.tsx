@@ -16,7 +16,7 @@ const PaginaInicial = () => {
         <h1 className="text-white text-6xl text-center">SecureCar</h1>
       </div>
       <section className="w-full flex justify-evenly items-center gap-3 my-4 h-[600px]">
-        <div className="w-1/2  flex justify-center items-center flex-col">
+        <div className="tablet:w-full w-1/2  flex justify-center items-center flex-col">
           <h3 className="text-5xl font-medium pb-16">Quem nós somos?</h3>
           <p className="text-3xl font-light w-3/4 text-center ">
             Nós somos a SecureCar, a ajuda que você precisa a qualquer momento.
@@ -24,7 +24,7 @@ const PaginaInicial = () => {
             simples e rápida possível.
           </p>
         </div>
-        <div className="w-1/2 flex justify-center items-center ">
+        <div className="tablet:hidden w-1/2 flex justify-center items-center ">
           <img
             src={help}
             alt="Ajudamos você com os problemas veiculares"
@@ -46,11 +46,11 @@ const PaginaInicial = () => {
         </p>
       </section>
       <section className="w-5/6 flex justify-evenly items-center gap-3 my-4 h-[600px] m-auto">
-        <div className="w-1/4 flex justify-center items-center">
-          <img src={guincho} alt="" />
+        <div className="tablet:hidden w-1/4 flex justify-center items-center">
+          <img src={guincho} alt="Imagem guincho" />
         </div>
-        <div className="w-3/4 flex justify-center items-center flex-col">
-          <h2 className="font-medium text-black text-5xl pb-[50px]">
+        <div className="w-3/4 tablet:w-full flex justify-center items-center flex-col">
+          <h2 className="font-medium text-center text-black text-5xl pb-[50px]">
           O que mais te oferecemos?
           </h2>
           <p className="font-light text-black text-3xl text-center w-3/4">
