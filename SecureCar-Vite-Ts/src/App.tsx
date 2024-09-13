@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div>
       <Header />
-      <div className='tela:min-h-screen  pb-2'>
+      <div className='tela:h-auto'>
         <Outlet />
       </div>
       <Chatbot />
