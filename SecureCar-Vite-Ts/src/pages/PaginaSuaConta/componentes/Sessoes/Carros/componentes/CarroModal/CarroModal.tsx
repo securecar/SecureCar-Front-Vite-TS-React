@@ -1,39 +1,43 @@
 import { Carro } from "../../../../../../../assets/TiposPadroes/Carro";
 
-import { useRef , useEffect } from "react"
+import { useRef , useEffect, useState } from "react"
 import InfoCarro from "./InfoCarro/InfoCarro";
+import Botao from "@/componentes/Botao/Botao";
 
 
 type CarroModalProps = {
     isOpen : boolean;
     carro: Carro;
-    children: React.ReactNode
+    children: React.ReactNode;
+    removerCarro: (nome : string)=>void;
 }
 
-const CarroModal = ({isOpen, carro,children} : CarroModalProps)=>{
+const CarroModal = ({isOpen, carro,children,removerCarro} : CarroModalProps)=>{
 
     const ref = useRef<HTMLDialogElement>(null)
 
-    useEffect(() =>{
-        if(!isOpen){
-            return;
+    const [open,setOpen] = useState(isOpen)
+
+    useEffect(() => {
+        setOpen(isOpen);
+      }, [isOpen]);
+    
+      useEffect(() => {
+        const dialog = ref.current;
+        if (open && dialog) {
+          dialog.showModal();
+        } else if (dialog) {
+          dialog.close();
         }
-    const dialog = ref.current
-    if (isOpen && dialog) {
-        dialog.showModal();
+      }, [open]);
+    function handleRemover(nome:string){
+        removerCarro(nome)
+        setOpen(false)
     }
-
-    return () => {
-        if (dialog) {
-            dialog.close();
-        }
-    };
-}, [isOpen]);
-
 
     const revisao = ()=>{
         if(parseFloat(carro.quilometragem) > 8000){
-            return`Cuidado está próximo da revisão de 10000 Quilômetros. Faltam ${10000 - parseFloat(carro.quilometragem)} Quilômetros.`
+            return`Cuidado está próximo da revisão de 10000 Quilômetros. Faltam ${10000 - parseFloat(carro.quilometragem)/10000} Quilômetros.`
         }else{
             return`Faltam ${10000 - (parseFloat(carro.quilometragem)/10000)} Quilômetros para a revisão`
         }
@@ -50,6 +54,7 @@ const CarroModal = ({isOpen, carro,children} : CarroModalProps)=>{
             <InfoCarro title="Chassi" span={carro.chassi} />
             <InfoCarro title="Revisão dos 10000 Quilômetros" span={revisao()} />
             <InfoCarro title="Seguro" span={carro.seguro} />
+            <button className="group cursor-pointer flex flex-row justify-center items-center min-w-52 hover:bg-primary hover:text-white font-semibold text-lg w-2/5 rounded-xl p-3 border-2 border-primary shadow-md" type="button" onClick={() => handleRemover(carro.modelo)}>Remover Veiculo</button>
         </dialog>
     )
 }
