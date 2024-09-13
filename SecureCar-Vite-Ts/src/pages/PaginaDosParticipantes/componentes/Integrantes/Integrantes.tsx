@@ -12,7 +12,7 @@ export default function Integrantes({ integrante }: { integrante: Integrantes[] 
             <ul>
                 {integrante.map((itg) => (
                     <li key={itg.rm} className="flex flex-row items-center space-x-10 pb-4 pl-3">
-                        <img src={itg.src} alt={itg.nome} style={{ width: '200px', height: '200px' }}/>
+                        <img src={itg.src} alt={itg.nome} className="w-1/3" />
                         <div>
                             <p>{itg.nome}</p>
                             <p >RM: {itg.rm}</p>
