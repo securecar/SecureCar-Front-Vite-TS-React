@@ -41,7 +41,8 @@ export default {
       'celular' : {'max':'550px'},
       'tablet' : {'max':'819px'},
       'tela': {'min': '820px'},
-      'tela-xl':{'min' : '820px','max':'1200px'}
+      'tela-xl':{'min' : '820px','max':'1200px'},
+      'ate-tela' : {'max' : '1024px'}
     }
   },
   plugins: [],

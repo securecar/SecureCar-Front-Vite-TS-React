@@ -3,6 +3,8 @@ import Historico from "./Historico/Historico"
 import { useEffect, useRef, useState } from "react";
 import Mensagens from "./componentes/Mensagens/Mensagens";
 import AvaliacaoPopup from "./componentes/Avaliacao/avaliacaoPopup";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 
 const PaginaChatBot = ()=>{
@@ -42,30 +44,29 @@ const PaginaChatBot = ()=>{
     useEffect(() => {
         const mostrarAvaliacao = () => {
             if (mensagens.length >= 5 && count == 0) {
-                const texto = document.createElement('p')
-                texto.textContent = "Obrigado por acessar nosso conteúdo!"
-                texto.classList.add('text-gray-500')
-                texto.classList.add('text-white')
-                texto.classList.add('text-lg')
-                const popup = document.querySelector('.popup-conteudo') 
-                popup?.appendChild(texto)
                 setOpen(!isOpen);
-                popup?.removeChild(texto)
-                texto.remove()
                 setCount(count + 1)
             }
         };
         scrollToBottom();
         mostrarAvaliacao();
     }, [count, isOpen, mensagens]);
-    
-    
 
+    const [clicked, setClicked] = useState(false)
+    
+    const toggleViewHistory = () => {
+        setClicked(!clicked)
+      } 
 
     return(
         <>
+            <div className="hidden celular:flex gap-5 items-center w-full bg-primary p-4 border-t border-primary-dark" onClick={toggleViewHistory}>
+                <FontAwesomeIcon icon={faAngleRight} className={`text-white text-xl ${clicked ? 'rotate-90 transition-all duration-150' : ''}`} />
+                <p className={`text-white tracking-wide font-semibold transition-all duration-300 ${clicked ? 'hidden' : ''}`}>Abrir histórico</p>
+                <p className={`text-white tracking-wide font-semibold transition-all duration-300 ${clicked ? '' : 'hidden'}`}>Fechar histórico</p>
+            </div>
             <div className="min-h-full flex justify-between w-full  items-end">
-                <Historico />
+                <Historico clicked={clicked} />
                 <div className="flex h-full w-full flex-col items-end pb-2 bottom-0 relative px-5">
                     <div ref={mensagensEndRef} className="w-[50%] h-full  mb-5 overflow-x-hidden overflow-y-scroll">
                         <div className="flex justify-end min-h-full items-end flex-col gap-y-4">

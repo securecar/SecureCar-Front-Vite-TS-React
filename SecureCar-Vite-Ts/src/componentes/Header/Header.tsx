@@ -13,11 +13,10 @@ const Header = () => {
   function clicadoVerifica(){
     if(clicado){
       setClicado(false)
-      console.log("Fechado")
+
       return
     }
     setClicado(true)
-    console.log("Aberto")
     return
   }
 
