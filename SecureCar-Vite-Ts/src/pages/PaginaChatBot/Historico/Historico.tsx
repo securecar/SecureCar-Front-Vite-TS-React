@@ -8,8 +8,8 @@ const Historico = () => {
     setViewHistory(!viewHistory)
   } 
   return (
-    <div className="bg-primary static w-max" >
-        <FontAwesomeIcon onClick={toggleViewHistory} className="cursor-pointer hover:scale-105 transition-all duration-300 mb-4 p-4" color="#fff" size="2xl" icon={faBars} />
+    <div className="bg-primary static max-w-xs p-0 flex flex-col h-[80vh]" >
+        <FontAwesomeIcon onClick={toggleViewHistory} className="cursor-pointer hover:scale-105 transition-all duration-300 mb-4 p-4 justify-self-start text-start" color="#fff" size="2xl" icon={faBars}  />
         <SidebarHistorico  view={viewHistory} />
     </div>
   )

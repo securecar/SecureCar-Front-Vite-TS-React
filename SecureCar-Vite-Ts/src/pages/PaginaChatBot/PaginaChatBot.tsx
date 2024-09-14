@@ -33,16 +33,16 @@ const PaginaChatBot = ()=>{
 
     return(
         <>
-            <div className="min-h-auto flex justify-between w-full ">
+            <div className="min-h-full flex justify-between w-full  items-end">
                 <Historico />
-                <div className="flex h-[80vh] w-full flex-col items-end pb-2 justify-center bottom-0 relative px-5">
+                <div className="flex h-full w-full flex-col items-end pb-2 bottom-0 relative px-5">
                     <div ref={mensagensEndRef} className="w-[50%] h-full  mb-5 overflow-x-hidden overflow-y-scroll">
                         <div className="flex justify-end min-h-full items-end flex-col gap-y-4">
                         {mensagens.length > 0? mensagens.map((mensagem,index) => <Mensagens key={index} mensagem={mensagem}/>) : ""} 
                         </div>            
                     </div>
                     
-                    <div className="w-full flex py-2 px-4  justify-between rounded-custom-xlg border-primary shadow-md border-4 h-max  bottom-0 ">
+                    <div className="w-full flex py-2 px-4  justify-between justify-self-end self-end rounded-custom-xlg border-primary shadow-md border-4 h-max  bottom-0 ">
                         <form className="w-full" action="./chatbot" onSubmit={enviarMsg}>
                             <input className="w-11/12 p-3 outline-none placeholder:text-2xl placeholder:font-medium placeholder:text-black mr-2 just" value={mensagem} onChange={valor =>setMensagem(valor.target.value)} type="text" placeholder="Digite aqui" />
                         </form>
