@@ -4,20 +4,20 @@ const ListaDeTestemunhos : CardTestemunhoType[] = [
     {
         imgTestemunho: "https://cdn.pixabay.com/photo/2016/12/05/22/57/smile-1885144_640.jpg",
         //escreva um txt testemunho com um testemunho genérico de um cliente satisfeito
-        txtTestemunho: "Otimos sistema para geração de diagnosticos para veiculos!"
+        txtTestemunho: "Ótimo sistema para geração de diagnósticos para veiculos!"
         
     },
     {
         imgTestemunho: "https://www.eusemfronteiras.com.br/wp-content/uploads/2017/04/shutterstock_1910141359-810x540.jpg",
         //escreva um txt testemunho com um testemunho genérico de um cliente satisfeito
-        txtTestemunho: "O unico e melhor sistema para aumentar a velocidade de concertos!"
+        txtTestemunho: "O único e melhor sistema para aumentar a velocidade de consertos!"
 
         
     }, 
     {
         imgTestemunho: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3McCSKzC7m88yNdYhUV2d4oCwKgslrNCM-A&s",
         //escreva um txt testemunho com um testemunho genérico de um cliente satisfeito
-        txtTestemunho: "Me salvou de sistuações desesperadoras!"
+        txtTestemunho: "Me salvou de situações desesperadoras!"
         
     }, 
     {

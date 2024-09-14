@@ -8,8 +8,8 @@ const [firstPost] = ListaPostsBlog;
 function Blog() {
   return (
     <>
-      <div className="bg-white flex flex-col max-w-screen-xl m-auto">
-        <h1 className="text-4xl text-center py-8">Blog</h1>
+      <div className="bg-white flex flex-col max-w-screen-xl m-auto py-6">
+        {/* <h1 className="text-4xl text-center py-8">Blog</h1> */}
         <Link to={`/blog/${firstPost.idPost}`}>
           <Post key={"main-post"} {...firstPost} isMainPost={true}/>
         </Link>

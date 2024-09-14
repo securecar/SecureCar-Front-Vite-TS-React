@@ -1,4 +1,5 @@
 import { CardEquipeProps } from "./CardEquipe/CardEquipe";
+import Margas from "@/assets/imgs/felipe.webp"
 
 export const ListaEquipe : CardEquipeProps[] = [
     {
@@ -9,14 +10,15 @@ export const ListaEquipe : CardEquipeProps[] = [
     },
     {
         nome : "Felipe Ribeiro",
-        foto : "https://github.com/cotete.png",
+        foto : Margas,
         linkGitHub : "https://github.com/cotete",
-        linkLinkedin : "https://www.linkedin.com/in/felipe-ribeiro-4b8b0b1b1"
+        linkLinkedin : "https://www.linkedin.com/in/felipe-ribeiro-tardochi-da-silva-112b712b5/"
     },
     {
         nome : "Enrico Guerra",
         foto : "https://github.com/enricodelguerra.png",
         linkGitHub : "https://github.com/enricodelguerra",
+        //TODO: linkedin do @enricodelguerra
         linkLinkedin : "https://www.linkedin.com/in/enrico-del-guerra"
     }
 ]
