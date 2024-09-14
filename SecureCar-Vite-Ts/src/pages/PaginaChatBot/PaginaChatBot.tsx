@@ -2,10 +2,11 @@ import sendBtnIcon from "@/assets/icons/send.svg"
 import Historico from "./Historico/Historico"
 import { useEffect, useRef, useState } from "react";
 import Mensagens from "./componentes/Mensagens/Mensagens";
+import AvaliacaoPopup from "./componentes/Avaliacao/avaliacaoPopup";
 
 
 const PaginaChatBot = ()=>{
-    let listaMensagens : string[]=[];
+    const listaMensagens : string[]=[];
 
     const [mensagem,setMensagem] = useState("");
     const [mensagens,setMensagens] = useState<string[]>(listaMensagens);
@@ -13,11 +14,17 @@ const PaginaChatBot = ()=>{
 
     function enviarMsg(e :React.FormEvent<HTMLFormElement>){
         e.preventDefault();
-        mensagem == "" ?"":(setMensagens([...mensagens, mensagem]), setMensagem(""))
+        if (mensagem !== "") {
+            setMensagens([...mensagens, mensagem]);
+            setMensagem("");
+        }
     }
     function enviarMsgClick(){
 
-        mensagem == "" ?"":(setMensagens([...mensagens, mensagem]), setMensagem(""))
+        if (mensagem !== "") {
+            setMensagens([...mensagens, mensagem]);
+            setMensagem("");
+        }
     }
 
     const scrollToBottom = () => {
@@ -26,10 +33,34 @@ const PaginaChatBot = ()=>{
         }
     };
 
+    const [isOpen, setOpen] = useState(false);
+    const fecharAvaliacao = () =>{
+        setOpen(!isOpen)
+    }
+    const [count, setCount] = useState(0);
+
     useEffect(() => {
+        const mostrarAvaliacao = () => {
+            if (mensagens.length >= 5 && count == 0) {
+                const texto = document.createElement('p')
+                texto.textContent = "Obrigado por acessar nosso conteúdo!"
+                texto.classList.add('text-gray-500')
+                texto.classList.add('text-white')
+                texto.classList.add('text-lg')
+                const popup = document.querySelector('.popup-conteudo') 
+                popup?.appendChild(texto)
+                setOpen(!isOpen);
+                popup?.removeChild(texto)
+                texto.remove()
+                setCount(count + 1)
+            }
+        };
         scrollToBottom();
-    }, [mensagens]);
-        
+        mostrarAvaliacao();
+    }, [count, isOpen, mensagens]);
+    
+    
+
 
     return(
         <>
@@ -52,6 +83,7 @@ const PaginaChatBot = ()=>{
                     </div>
                 </div>
             </div>
+            <AvaliacaoPopup isOpen={isOpen} onClose={fecharAvaliacao} />
         </>
     )
 }

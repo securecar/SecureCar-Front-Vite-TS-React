@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('./fonts.css');
 
 *{
     margin: 0;
