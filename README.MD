@@ -56,13 +56,9 @@ Para rodar o projeto SecureCar em sua máquina local, siga as instruções abaix
     <span style="font-size: 1.5em;">Gustavo Dias da Silva Cruz</span>
 </div>
 
-<div style="display: flex; gap: 10px; align-items: center; margin: 20px 0;>
-
-<span style="font-size: 2em; font-weight: bold;">Sobre a Porto Seguro</span>
-<img src="./SecureCar-Vite-Ts/src/assets/imgs/porto-seguro.svg" height="100px" />
-
-</div>
-
+## Porto Seguro
+<img src="./SecureCar-Vite-Ts/src/assets/imgs/porto-seguro.svg" height="100px"/>
+<br>
 
 A Porto Seguro é uma das maiores seguradoras do Brasil, com uma história de mais de 70 anos no mercado. Fundada em 1945, a empresa oferece uma ampla gama de produtos e serviços, incluindo seguros de automóveis, residenciais, de saúde, de vida, e muito mais. Além disso, a Porto Seguro é conhecida por seu compromisso com a inovação e a excelência no atendimento ao cliente, buscando sempre oferecer soluções que atendam às necessidades e expectativas de seus segurados.
 
