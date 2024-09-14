@@ -69,7 +69,7 @@ const AvaliacaoPopup = ({ isOpen, onClose }: PopupProps) => {
         </div>
         <div className={`flex gap-4 justify-start items-center ${conteudoIframe ? '-ml-5 ' : 'hidden'}`}>
           <p className="text-gray-300 text-xl w-full">Obrigado pela sua avaliação!</p>
-          <FontAwesomeIcon icon={faFaceSmileBeam} className="text-yellow-400 text-2xl absolute right-11 " />
+          <FontAwesomeIcon icon={faFaceSmileBeam} className="md:!static text-yellow-400 text-2xl absolute right-11 " />
         </div>
         <iframe className={`${conteudoIframe ? 'block h-max -mt-5 -mb-10' : 'hidden'}`} src="https://lottie.host/embed/380ec78b-0078-4076-8cc4-6fb7806aa78b/gbSqzPlBsm.json"></iframe>
       </div>
