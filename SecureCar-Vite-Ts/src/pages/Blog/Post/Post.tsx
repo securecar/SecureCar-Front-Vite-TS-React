@@ -21,11 +21,11 @@ const Post = ({idPost, isMainPost, imagem, titulo, autorImagem, autor, dataCriac
         <>  
             {isMainPost 
             ? 
-            <div className="w-full bg-white" data-id={idPost}>
-                <img className="w-full h-[600px] object-cover rounded-xl m-auto " src={imagem} alt={descImagem}/>
-                <div className="relative bg-white p-10 flex flex-col w-2/5 justify-start -mt-60 ml-24 h-max rounded-xl shadow-md mb-4 hover:cursor-pointer hover:scale-105 transition-all duration-500">
+            <div className="w-full bg-white celular:flex celular:flex-col celular:justify-center celular:items-center " data-id={idPost}>
+                <img className="celular:w-[90vw] celular:h-[400px] w-full h-[600px] object-cover rounded-xl m-auto " src={imagem} alt={descImagem}/>
+                <div className="celular:w-[80vw] celular:ml-0 celular:-mt-10 celular: relative bg-white p-10 flex flex-col w-2/5 justify-start -mt-60 ml-24 h-max rounded-xl shadow-md mb-4 hover:cursor-pointer hover:scale-105 transition-all duration-500">
                     <TagPost tagPost={tagPost} />
-                    <h2 className="text-black text-4xl font-semibold py-4">{titulo}</h2>
+                    <h2 className="text-black celular:text-2xl text-4xl font-semibold py-4">{titulo}</h2>
                     <div className="post-details flex gap-3 justify-start py-4 items-center w-full">
                         <div className="flex gap-2 items-center">
                             <img className="size-9 rounded-full object-cover object-top" src={autorImagem} alt={autor} />
