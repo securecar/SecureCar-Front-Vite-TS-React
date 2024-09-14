@@ -18,7 +18,6 @@ export const ListaEquipe : CardEquipeProps[] = [
         nome : "Enrico Guerra",
         foto : "https://github.com/enricodelguerra.png",
         linkGitHub : "https://github.com/enricodelguerra",
-        //TODO: linkedin do @enricodelguerra
-        linkLinkedin : "https://www.linkedin.com/in/enrico-del-guerra"
+        linkLinkedin : "http://www.linkedin.com/in/enricodelguerra"
     }
 ]
