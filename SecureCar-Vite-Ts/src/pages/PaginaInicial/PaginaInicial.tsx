@@ -4,8 +4,6 @@ import Testemunhos from "@/componentes/Testemunhos/testemunhos";
 import ListaDeTestemunhos from "./lista_testemunhos";
 import Equipe from "@/componentes/Equipe/Equipe";
 import Carousel from "@/componentes/TesteEquipe/teste";
-import { images } from "@/componentes/TesteEquipe/images";
-
 
 const PaginaInicial = () => {
 
@@ -62,7 +60,7 @@ const PaginaInicial = () => {
       </section>
       <Testemunhos key={"testemunhos"} lista_testemunhos={ListaDeTestemunhos}/>
       <Equipe />
-      <Carousel images={images} />
+      <Carousel testemunhos={ListaDeTestemunhos} />
     </>
   );
 };
