@@ -24,7 +24,7 @@ const Post = ({idPost, isMainPost, imagem, titulo, autorImagem, autor, dataCriac
             <div className="w-full bg-white celular:flex celular:flex-col celular:justify-center celular:items-center " data-id={idPost}>
                 <img className="celular:w-[90vw] celular:h-[400px] w-full h-[600px] object-cover rounded-xl m-auto " src={imagem} alt={descImagem}/>
                 <div className="celular:w-[80vw] celular:ml-0 celular:-mt-10 celular: relative bg-white p-10 flex flex-col w-2/5 justify-start -mt-60 ml-24 h-max rounded-xl shadow-md mb-4 hover:cursor-pointer hover:scale-105 transition-all duration-500">
-                    <TagPost tagPost={tagPost} />
+                    <TagPost isMainCell={true} tagPost={tagPost} />
                     <h2 className="text-black celular:text-2xl text-4xl font-semibold py-4">{titulo}</h2>
                     <div className="post-details flex gap-3 justify-start py-4 items-center w-full">
                         <div className="flex gap-2 items-center">
@@ -40,7 +40,7 @@ const Post = ({idPost, isMainPost, imagem, titulo, autorImagem, autor, dataCriac
             : 
             <div className="bg-white border border-[#c5c5c6] p-4 rounded-xl min-h-96 max-w-[400px] m-auto flex flex-col justify-center items-center hover:scale-105 hover:cursor-pointer transition-all duration-500" data-id={idPost}>
                 <img className="h-[240px] w-[360px] rounded object-cover my-2 object-top" src={imagem} alt={descImagem} />
-                <TagPost tagPost={tagPost} />
+                <TagPost isMainCell={true} tagPost={tagPost} />
                 <h3 className="text-black text-2xl font-semibold py-4">{titulo}</h3>
                 <div className="post-details flex gap-3 justify-between py-4 items-center w-full">
                     <div className="flex gap-2 items-center">
