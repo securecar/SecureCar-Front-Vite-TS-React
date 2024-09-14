@@ -1,4 +1,5 @@
 import { CardEquipeProps } from "./CardEquipe/CardEquipe";
+import Margas from "@/assets/imgs/felipe.webp"
 
 export const ListaEquipe : CardEquipeProps[] = [
     {
@@ -9,7 +10,7 @@ export const ListaEquipe : CardEquipeProps[] = [
     },
     {
         nome : "Felipe Ribeiro",
-        foto : "https://github.com/cotete.png",
+        foto : Margas,
         linkGitHub : "https://github.com/cotete",
         linkLinkedin : "https://www.linkedin.com/in/felipe-ribeiro-4b8b0b1b1"
     },
