@@ -4,14 +4,14 @@ export type tagPostProps = {
 const TagPost = ({tagPost} : tagPostProps) => {
 
   const colorVariants = {
-    "Tecnologia" : "flex self-start bg-[#f6f7ff] text-[#4B6BFB] rounded w-max px-2 py-1 font-semibold ",
-    "Segurança" : "flex self-start bg-[#f6f7ff] text-[#4B6BFB] rounded w-max px-2 py-1 font-semibold ",
-    "Carro" : "flex self-start bg-[#f6f7ff] text-[#4B6BFB] rounded w-max px-2 py-1 font-semibold ",
-    "Seguro" : "flex self-start bg-[#f6f7ff] text-[#3b41af] rounded w-max px-2 py-1 font-semibold ",
+    "Tecnologia" : "celular:ml-[2em] flex self-start bg-[#f6f7ff] text-[#4B6BFB] rounded w-max px-2 py-1 font-semibold ",
+    "Segurança" : "celular:ml-[2em] flex self-start bg-[#f6f7ff] text-[#4B6BFB] rounded w-max px-2 py-1 font-semibold ",
+    "Carro" : "celular:ml-[2em] flex self-start bg-[#f6f7ff] text-[#4B6BFB] rounded w-max px-2 py-1 font-semibold ",
+    "Seguro" : "celular:ml-[2em] flex self-start bg-[#f6f7ff] text-[#3b41af] rounded w-max px-2 py-1 font-semibold ",
   }
   
   return (
-    <div  className={`${tagPost ? colorVariants[tagPost] : 'flex self-start bg-[#f6f7ff] text-black rounded w-max px-2 py-1 font-semibold '}`}>{tagPost ? tagPost : 'Undefined'}</div>
+    <div  className={`'' ${tagPost ? colorVariants[tagPost] : 'flex self-start bg-[#f6f7ff] text-black rounded w-max px-2 py-1 font-semibold '}`}>{tagPost ? tagPost : 'Undefined'}</div>
   )
 }
 

@@ -21,16 +21,16 @@ const SinglePost = () => {
   }
   const sanitizedContent = DOMPurify.sanitize(post.conteudo);
   return (
-    <div className="max-w-screen-lg flex flex-col gap-5 m-auto py-5 ">
+    <div className="max-w-screen-lg flex flex-col gap-5 m-auto celular:pt-0 py-5 ">
       <img
         className="w-full object-cover max-h-[500px] rounded object-top"
         src={post.imagem}
         alt={post.descImagem}
       />
       <TagPost tagPost={post.tagPost} />
-      <h1 className="text-4xl font-bold">{post.titulo}</h1>
-      <h4 className="text-lg font-light">{post.descricao}</h4>
-      <div className="flex gap-3 justify-start items-center">
+      <h1 className="celular:px-[1.5em] text-2xl font-bold">{post.titulo}</h1>
+      <h4 className="celular:px-[2em] text-lg font-light">{post.descricao}</h4>
+      <div className="celular:px-[2em] flex gap-3 justify-start items-center">
         <img className="h-10 w-10 object-cover rounded-full" src={post.autorImagem} alt={post.autor} />
         <p className="text-sm font-semibold text-gray-500">{post.autor}</p>
         <p className="text-sm font-semibold text-gray-500">{post.dataCriacao}</p>
