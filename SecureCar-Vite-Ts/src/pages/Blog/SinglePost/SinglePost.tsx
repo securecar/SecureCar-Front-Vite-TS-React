@@ -3,7 +3,8 @@ import TagPost from "../Post/TagPost/TagPost";
 import DOMPurify from "dompurify";
 import { useParams } from 'react-router-dom';
 import { ListaPostsBlog } from "../PostLista/lista_posts_blog";
-import styles from "./SinglePost.module.css"
+import Erro from "@/pages/PaginaErro/componentes/Erro";
+import "./blog-estilo.css";
 //:id
 export type SinglePost = {
   descricao: string;
@@ -16,11 +17,11 @@ const SinglePost = () => {
   // const navigate = useNavigate()
   // navigate('')
   if (!post) {
-    return <div>Post not found</div>;
+    return <Erro />;
   }
   const sanitizedContent = DOMPurify.sanitize(post.conteudo);
   return (
-    <div className="max-w-screen-lg flex flex-col gap-5 m-auto py-5 " style={styles}>
+    <div className="max-w-screen-lg flex flex-col gap-5 m-auto py-5 ">
       <img
         className="w-full object-cover max-h-[500px] rounded object-top"
         src={post.imagem}
@@ -34,7 +35,7 @@ const SinglePost = () => {
         <p className="text-sm font-semibold text-gray-500">{post.autor}</p>
         <p className="text-sm font-semibold text-gray-500">{post.dataCriacao}</p>
       </div>
-      <div className="text-black text-lg leading-snug gap-4 blog-content *:leading-snug group-[h3]:font-semibold" dangerouslySetInnerHTML={{ __html: sanitizedContent }} />
+      <div className="text-black text-lg leading-snug gap-4 *:leading-snug group-[h3]:font-semibold" dangerouslySetInnerHTML={{ __html: sanitizedContent }} />
     </div>
   );
 };

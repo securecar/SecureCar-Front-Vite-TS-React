@@ -1,12 +1,13 @@
 export type tagPostProps = {
-  tagPost? : "Technology" | "Security" | "Car"
+  tagPost? : "Tecnologia" | "Segurança" | "Carro" | "Seguro"
 }
 const TagPost = ({tagPost} : tagPostProps) => {
 
   const colorVariants = {
-    "Technology" : "flex self-start bg-[#f6f7ff] text-[#4B6BFB] rounded w-max px-2 py-1 font-semibold ",
-    "Security" : "flex self-start bg-[#f6f7ff] text-[#4B6BFB] rounded w-max px-2 py-1 font-semibold ",
-    "Car" : "flex self-start bg-[#f6f7ff] text-[#4B6BFB] rounded w-max px-2 py-1 font-semibold ",
+    "Tecnologia" : "flex self-start bg-[#f6f7ff] text-[#4B6BFB] rounded w-max px-2 py-1 font-semibold ",
+    "Segurança" : "flex self-start bg-[#f6f7ff] text-[#4B6BFB] rounded w-max px-2 py-1 font-semibold ",
+    "Carro" : "flex self-start bg-[#f6f7ff] text-[#4B6BFB] rounded w-max px-2 py-1 font-semibold ",
+    "Seguro" : "flex self-start bg-[#f6f7ff] text-[#3b41af] rounded w-max px-2 py-1 font-semibold ",
   }
   
   return (

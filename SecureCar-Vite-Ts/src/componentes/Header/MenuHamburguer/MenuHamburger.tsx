@@ -20,12 +20,12 @@ const MenuHamburguer = ({onClick,clicado,setClicado} : MenuProps) =>{
 
     useEffect(() => {
         setClicado(false);
-    }, [location.pathname]);
+    }, [location.pathname, setClicado]);
 
     return(
-        <div className={clicado?`block w-screen h-screen`:""}>
+        <div className={clicado?`flex w-screen h-screen flex-col items-end px-8`:""}>
             <FontAwesomeIcon onClick={onClick} className="cursor-pointer hover:scale-105 transition-all duration-300 mb-4 p-4" color="#fff" size="2xl" icon={faBars} />
-            <div className="flex w-full flex-col justify-center items-start">
+            <div className="flex w-full flex-col justify-center items-end">
                 <Link className={clicado?`static flex text-xl text-white hover:text-black mx-3 font-medium w-max gap-4 items-center py-4`:"hidden"} to={login ? "/conta" : '/login'}>Seu perfil<img src={profile} className="h-[30px] hover:scale-110 transition"></img></Link>
                 <NavBar isMenuHamburguer={clicado}></NavBar>
             </div>
