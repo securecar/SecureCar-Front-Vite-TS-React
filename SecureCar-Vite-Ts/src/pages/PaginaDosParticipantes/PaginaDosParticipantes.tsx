@@ -41,7 +41,7 @@ const integrantes:Integrantes[] = [
 
     return(
         <>
-        <h1 className="md:text-3xl tela:4xl text-center tracking-wide font-semibold pt-4">Pagina dos Participantes</h1>
+        <h1 className="md:text-3xl tela:4xl celular:text-2xl text-center tracking-wide font-semibold pt-4">Pagina dos Participantes</h1>
         <Integrantes integrante={integrantes}/>
         </>
     )
