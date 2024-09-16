@@ -2,6 +2,7 @@ import { useState } from "react";
 import Botao from "../../../../componentes/Botao/Botao"
 import InputArea from "../../../../componentes/InputArea/InputArea"
 import { Usuario } from "../../PaginaRegistroLogin"
+import { useNavigate } from "react-router-dom";
 
 
 type FormLoginProps = {
@@ -12,6 +13,7 @@ type FormLoginProps = {
 const FormLogin = ({usuarios}: FormLoginProps)=>{
     const [inputCPF, setInputCPF] = useState("");
     const [inputSenha, setInputSenha] = useState("");
+    const nav = useNavigate();
 
 
 
@@ -28,6 +30,7 @@ const FormLogin = ({usuarios}: FormLoginProps)=>{
                 setInputSenha("");
                 console.log("Logado");
                 usuarioAchado = true;
+                nav("/inicial")
                 break;
             }
         }

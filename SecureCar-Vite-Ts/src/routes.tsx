@@ -15,8 +15,8 @@ import SinglePost from "./pages/Blog/SinglePost/SinglePost";
 export const routes = createBrowserRouter([
     {
       path:'/',element:<App/>, errorElement:<PaginaErro/>,children:[
-        {path:'/login',element:<PaginaRegistroLogin/>},
-        {path:'/',element:<PaginaInicial/>},
+        {path:'/',element:<PaginaRegistroLogin/>},
+        {path:'/inicial',element:<PaginaInicial/>},
         {path:'/faq',element:<PaginaFAQ/>},
         {path:'/novidades',element:<PaginaNovidades/>},
         {path:'/chatbot',element:<PaginaChatBot/>},

@@ -62,11 +62,13 @@ const FormRegistro = ({ onSubmit }: FormRegistroProps) => {
           required={true}
           onChange={valor => setInputEmail(valor)}
           label="Email"
+          tipo="email"
           placeHolder="Digite seu email"
         />
         <InputArea
           value={inputSenha}
           required={true}
+          tipo="password"
           onChange={valor => setInputSenha(valor)}
           label="Senha"
           placeHolder="Digite sua senha"
@@ -74,6 +76,7 @@ const FormRegistro = ({ onSubmit }: FormRegistroProps) => {
         <InputArea
           value={inputSenhaAux}
           required={true}
+          tipo="password"
           onChange={valor => setInputSenhaAux(valor)}
           label="Confirmar Senha"
           placeHolder="Confirme sua senha"
@@ -83,7 +86,8 @@ const FormRegistro = ({ onSubmit }: FormRegistroProps) => {
           required={true}
           onChange={valor => setInputCPF(valor)}
           label="CPF"
-          placeHolder="Digite seu CPF"
+          placeHolder="Digite seu CPF (somente números)"
+          max_length={11}
         />
         <InputArea
           value={inputEndereco}
@@ -97,14 +101,15 @@ const FormRegistro = ({ onSubmit }: FormRegistroProps) => {
           required={true}
           onChange={valor => setInputCEP(valor)}
           label="CEP"
-          placeHolder="Digite seu CEP"
+          max_length={9}
+          placeHolder="XXXXX-XXX"
         />
         <InputArea
           value={inputTelefone}
           required={true}
           onChange={valor => setInputTelefone(valor)}
           label="Telefone"
-          placeHolder="Digite seu Telefone"
+          placeHolder="Digite seu Telefone (somente números)"
         />
         <div className="p-3 w-full flex items-center justify-center">
           <Botao tipo="submit">Cadastre-se</Botao>

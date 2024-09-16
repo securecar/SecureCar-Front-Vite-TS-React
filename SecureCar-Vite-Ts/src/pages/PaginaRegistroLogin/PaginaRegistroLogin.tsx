@@ -29,6 +29,7 @@ const PaginaRegistroLogin = () => {
             };
             lista_user.push(usuario)
             console.log(usuario)
+            setConteudo("Login")
     }
 
     let conteudoChanger = () => {
