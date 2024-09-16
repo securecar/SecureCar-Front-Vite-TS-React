@@ -33,12 +33,13 @@ const Endereco = ({nome,cep,numero,cidade,estado} : EnderecoProps)=>{
 
     function aoSalvar(e : React.FormEvent<HTMLFormElement>){
         e.preventDefault()
-        const InfosAtt={
-            cep: cepUser,
-            numero : numeroUser,
-            cidade : cidadeUser,
-            estado : estadoUser
-        };
+        // const InfosAtt={
+        //     cep: cepUser,
+        //     numero : numeroUser,
+        //     cidade : cidadeUser,
+        //     estado : estadoUser
+        // };
+
     }
 
     return(

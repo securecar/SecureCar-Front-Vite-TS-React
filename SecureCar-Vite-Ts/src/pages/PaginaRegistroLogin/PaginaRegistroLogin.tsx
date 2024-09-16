@@ -18,7 +18,7 @@ const PaginaRegistroLogin = () => {
 
     const [conteudo, setConteudo] = useState('Cadastro')
 
-    function cadastrar(inputNome: string, inputEmail: string, inputSenha: string, inputSenhaAux: string, inputCPF: string, inputEndereco: string, inputCEP: string, inputNascimento:string, inputTelefone: string):void {
+    function cadastrar(inputNome: string, inputEmail: string, inputSenha: string, inputCPF: string, inputEndereco: string, inputCEP: string, inputNascimento:string, inputTelefone: string):void {
             const usuario: Usuario = {
                 Nome : inputNome,
                 Email: inputEmail,
@@ -29,12 +29,13 @@ const PaginaRegistroLogin = () => {
                 Nascimento: inputNascimento,
                 Telefone: inputTelefone
             };
+            
             lista_user.push(usuario)
             console.log(usuario)
             setConteudo("Login")
     }
 
-    let conteudoChanger = () => {
+    const conteudoChanger = () => {
         switch (conteudo) {
             case 'Cadastro':
                 return <FormRegistro onSubmit={cadastrar} />

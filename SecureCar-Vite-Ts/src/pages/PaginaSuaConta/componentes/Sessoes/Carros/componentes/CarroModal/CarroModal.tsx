@@ -2,7 +2,7 @@ import { Carro } from "../../../../../../../assets/TiposPadroes/Carro";
 
 import { useRef , useEffect, useState } from "react"
 import InfoCarro from "./InfoCarro/InfoCarro";
-import Botao from "@/componentes/Botao/Botao";
+
 
 
 type CarroModalProps = {

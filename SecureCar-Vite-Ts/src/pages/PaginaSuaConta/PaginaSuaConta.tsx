@@ -16,7 +16,7 @@ const PaginaSuaConta = ()=>{
     const [endereco, setEndereco] = useState<boolean>()
     const [modo , setModo] = useState<boolean>()
 
-    let changeFonte = (fontSize : string) =>{
+    const changeFonte = (fontSize : string) =>{
         if(fontSize === "16px"){
             setFontSize("")
         }else if(fontSize === "20px"){
@@ -26,7 +26,7 @@ const PaginaSuaConta = ()=>{
         }
     }
 
-    let changeModo = (modo :string)=>{
+    const changeModo = (modo :string)=>{
         if( modo === "Modo Escuro"){
             setModo(true)
             return;
@@ -37,7 +37,7 @@ const PaginaSuaConta = ()=>{
 
 
 
-    let listaCarro : [] = []
+    const listaCarro : [] = []
     function mudaBotao(nome : string){
         setConteudo(nome)
         setSuasConfiguracoes(nome === "Suas Configuracoes")
@@ -54,7 +54,7 @@ const PaginaSuaConta = ()=>{
         setConteudo("")
     }
 
-    let conteudoChanger = () => {
+    const conteudoChanger = () => {
         switch(conteudo){
             case 'Suas Configuracoes':
                 return <SuasConfiguracoes dataNascimento="25/10/1980" nome="gerson bragantino" cpf="123.123.123-12" senha="********" email="gersonbragantino@email.com"/>
@@ -64,6 +64,8 @@ const PaginaSuaConta = ()=>{
                 return <Endereco nome="gerson bragantino" cep="12312-123" numero="10" cidade="Sao pulo" estado="SP"/>
             case 'Carros':
                 return <Carros listaCarro={listaCarro}/>
+            default:
+                return fontSize;
         }
             
     }
