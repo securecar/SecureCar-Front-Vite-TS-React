@@ -4,7 +4,7 @@ import InputArea from "../../../../componentes/InputArea/InputArea";
 
 
 type FormRegistroProps = {
-  onSubmit: (inputNome: string, inputEmail: string, inputSenha: string, inputSenhaAux: string, inputCPF: string, inputEndereco: string, inputCEP: string, inputTelefone: string) => void;
+  onSubmit: (inputNome: string, inputEmail: string, inputSenha: string, inputSenhaAux: string, inputCPF: string, inputEndereco: string, inputCEP: string,inputNascimento:string, inputTelefone: string) => void;
 };
 
 const FormRegistro = ({ onSubmit }: FormRegistroProps) => {
@@ -16,6 +16,7 @@ const FormRegistro = ({ onSubmit }: FormRegistroProps) => {
   const [inputCPF, setInputCPF] = useState("");
   const [inputEndereco, setInputEndereco] = useState("");
   const [inputCEP, setInputCEP] = useState("");
+  const [inputNascimento, setInputNascimento] = useState("");
   const [inputTelefone, setInputTelefone] = useState("");
 
 
@@ -32,7 +33,7 @@ const FormRegistro = ({ onSubmit }: FormRegistroProps) => {
       }
 
     if(inputSenhaAux == inputSenha && verificaEmail(inputEmail) && inputCEP.length==9 && inputCPF.length==11){
-        onSubmit(inputNome, inputEmail, inputSenha, inputSenhaAux, inputCPF, inputEndereco, inputCEP, inputTelefone);
+        onSubmit(inputNome, inputEmail, inputSenha, inputSenhaAux, inputCPF, inputEndereco, inputCEP,inputNascimento, inputTelefone);
         setInputNome("");
         setInputEmail("");
         setInputSenha("");
@@ -62,11 +63,13 @@ const FormRegistro = ({ onSubmit }: FormRegistroProps) => {
           required={true}
           onChange={valor => setInputEmail(valor)}
           label="Email"
+          tipo="email"
           placeHolder="Digite seu email"
         />
         <InputArea
           value={inputSenha}
           required={true}
+          tipo="password"
           onChange={valor => setInputSenha(valor)}
           label="Senha"
           placeHolder="Digite sua senha"
@@ -74,6 +77,7 @@ const FormRegistro = ({ onSubmit }: FormRegistroProps) => {
         <InputArea
           value={inputSenhaAux}
           required={true}
+          tipo="password"
           onChange={valor => setInputSenhaAux(valor)}
           label="Confirmar Senha"
           placeHolder="Confirme sua senha"
@@ -83,7 +87,8 @@ const FormRegistro = ({ onSubmit }: FormRegistroProps) => {
           required={true}
           onChange={valor => setInputCPF(valor)}
           label="CPF"
-          placeHolder="Digite seu CPF"
+          placeHolder="Digite seu CPF (somente números)"
+          max_length={11}
         />
         <InputArea
           value={inputEndereco}
@@ -97,14 +102,24 @@ const FormRegistro = ({ onSubmit }: FormRegistroProps) => {
           required={true}
           onChange={valor => setInputCEP(valor)}
           label="CEP"
-          placeHolder="Digite seu CEP"
+          max_length={9}
+          placeHolder="XXXXX-XXX"
+        />
+         <InputArea
+          value={inputNascimento}
+          required={true}
+          onChange={valor => setInputNascimento(valor)}
+          label="Data de Nascimento"
+          tipo="date"
+          max_length={9}
+          placeHolder="XXXXX-XXX"
         />
         <InputArea
           value={inputTelefone}
           required={true}
           onChange={valor => setInputTelefone(valor)}
           label="Telefone"
-          placeHolder="Digite seu Telefone"
+          placeHolder="Digite seu Telefone (somente números)"
         />
         <div className="p-3 w-full flex items-center justify-center">
           <Botao tipo="submit">Cadastre-se</Botao>
