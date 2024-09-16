@@ -2,6 +2,8 @@
 
 O projeto SecureCar é um sistema de diagnóstico que visa indicar soluções para problemas de origem veicular, junto à Porto Seguros. Este repositório contém a parte frontend do projeto, desenvolvido em Vite, TypeScript e React.
 
+[Nosso Repo no Github](https://github.com/securecar/SecureCar-Front-Vite-TS-React)
+
 ## Veja o vídeo demonstrativo da nossa aplicação
 [Protótipo de Youtube](https://www.youtube.com/watch?v=WNw0F5dnafU)
 
