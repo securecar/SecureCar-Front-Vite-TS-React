@@ -2,6 +2,10 @@
 
 O projeto SecureCar é um sistema de diagnóstico que visa indicar soluções para problemas de origem veicular, junto à Porto Seguros. Este repositório contém a parte frontend do projeto, desenvolvido em Vite, TypeScript e React.
 
+## Veja o vídeo demonstrativo da nossa aplicação
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WNw0F5dnafU?si=YVx0UQB3RJFxyjYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Como rodar o projeto em máquina local
 
 Para rodar o projeto SecureCar em sua máquina local, siga as instruções abaixo:
