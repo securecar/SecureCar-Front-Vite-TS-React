@@ -7,7 +7,7 @@ import NavBar from "./NavBar/NavBar";
 
 const Header = () => {
   const [clicado, setClicado] = useState(false)
-  const login = sessionStorage.getItem('Logado')
+  // const login = sessionStorage.getItem('Logado')
 
 
   function clicadoVerifica() {

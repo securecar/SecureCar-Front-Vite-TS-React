@@ -24,13 +24,13 @@ const SuasConfiguracoes = ({dataNascimento, nome,cpf,senha,email} : SuasConfigur
 
     function aoSalvar(e : React.FormEvent<HTMLFormElement>){
         e.preventDefault()
-        const InfosAtt={
-            nome: nomeUser,
-            cpf : cpfUser,
-            senha : senhaUser,
-            email : emailUser,
-            dataNascimento : dataNascimentoUser
-        };
+        // const InfosAtt={
+        //     nome: nomeUser,
+        //     cpf : cpfUser,
+        //     senha : senhaUser,
+        //     email : emailUser,
+        //     dataNascimento : dataNascimentoUser
+        // };
     }
 
     function changeDisable(){
