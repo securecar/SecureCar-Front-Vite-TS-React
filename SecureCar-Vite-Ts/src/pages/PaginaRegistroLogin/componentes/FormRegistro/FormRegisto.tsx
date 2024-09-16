@@ -4,7 +4,7 @@ import InputArea from "../../../../componentes/InputArea/InputArea";
 
 
 type FormRegistroProps = {
-  onSubmit: (inputNome: string, inputEmail: string, inputSenha: string, inputSenhaAux: string, inputCPF: string, inputEndereco: string, inputCEP: string, inputTelefone: string) => void;
+  onSubmit: (inputNome: string, inputEmail: string, inputSenha: string, inputSenhaAux: string, inputCPF: string, inputEndereco: string, inputCEP: string,inputNascimento:string, inputTelefone: string) => void;
 };
 
 const FormRegistro = ({ onSubmit }: FormRegistroProps) => {
@@ -16,6 +16,7 @@ const FormRegistro = ({ onSubmit }: FormRegistroProps) => {
   const [inputCPF, setInputCPF] = useState("");
   const [inputEndereco, setInputEndereco] = useState("");
   const [inputCEP, setInputCEP] = useState("");
+  const [inputNascimento, setInputNascimento] = useState("");
   const [inputTelefone, setInputTelefone] = useState("");
 
 
@@ -32,7 +33,7 @@ const FormRegistro = ({ onSubmit }: FormRegistroProps) => {
       }
 
     if(inputSenhaAux == inputSenha && verificaEmail(inputEmail) && inputCEP.length==9 && inputCPF.length==11){
-        onSubmit(inputNome, inputEmail, inputSenha, inputSenhaAux, inputCPF, inputEndereco, inputCEP, inputTelefone);
+        onSubmit(inputNome, inputEmail, inputSenha, inputSenhaAux, inputCPF, inputEndereco, inputCEP,inputNascimento, inputTelefone);
         setInputNome("");
         setInputEmail("");
         setInputSenha("");
@@ -101,6 +102,15 @@ const FormRegistro = ({ onSubmit }: FormRegistroProps) => {
           required={true}
           onChange={valor => setInputCEP(valor)}
           label="CEP"
+          max_length={9}
+          placeHolder="XXXXX-XXX"
+        />
+         <InputArea
+          value={inputNascimento}
+          required={true}
+          onChange={valor => setInputNascimento(valor)}
+          label="Data de Nascimento"
+          tipo="date"
           max_length={9}
           placeHolder="XXXXX-XXX"
         />
