@@ -5,9 +5,11 @@ type InputArea={
     disable ?: boolean;
     value ?: string;
     onChange ?: (valor : string) =>void;
+    tipo ?: string;
+    max_length ?: number;
 }
 
-const InputArea = ({onChange,value,label,required ,placeHolder, disable}:InputArea)=>{
+const InputArea = ({onChange,value,label,required ,placeHolder, disable,tipo,max_length}:InputArea)=>{
 
     const aoDigitado = (e :string)=>{
         if(onChange != undefined){
@@ -23,7 +25,9 @@ const InputArea = ({onChange,value,label,required ,placeHolder, disable}:InputAr
         value={value}
         required={required}
         placeholder={placeHolder}
+        type={tipo}
         disabled={disable}
+        maxLength={max_length}
         onChange={e => aoDigitado(e.target.value)}>
         </input>
         </>

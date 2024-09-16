@@ -1,17 +1,16 @@
 import Header from "@/componentes/Header/Header";
-import { Outlet } from "react-router-dom";
+
 import Erro from "./componentes/Erro";
 import Footer from "@/componentes/Folder/Footer";
 
-const App = ()=>{
+const PaginaErro = ()=>{
     return (
         <>
         <Header/>
-        <Outlet/>
         <Erro/>
         <Footer/>
         </>
     );
 }
 
-export default App;
+export default PaginaErro;

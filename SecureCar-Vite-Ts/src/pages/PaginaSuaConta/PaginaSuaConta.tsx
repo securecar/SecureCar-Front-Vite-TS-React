@@ -14,10 +14,7 @@ const PaginaSuaConta = ()=>{
     const [acessibilidade, setAcessibilidade] = useState<boolean>()
     const [carros, setCarros] = useState<boolean>()
     const [endereco, setEndereco] = useState<boolean>()
-    const [modo , setModo] = useState(() :boolean =>{
-        const saved = localStorage.getItem("check");
-        return saved !== null ? JSON.parse(saved) : true;
-    })
+    const [modo , setModo] = useState<boolean>()
 
     let changeFonte = (fontSize : string) =>{
         if(fontSize === "16px"){

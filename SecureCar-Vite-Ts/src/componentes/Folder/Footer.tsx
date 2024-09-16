@@ -13,7 +13,7 @@ const Footer = () => {
       <p className="text-white text-center text-sm font-bold my-4">&copy; 2024 SecureCar</p>
       <hr className="border-t-2 border-[#6ea6e8] py-4 w-full" ></hr>
       <div className="w-full flex gap-4 justify-between items-center celular:flex-col">
-      <Link to="/" ><img src={logo} className="h-[40px] hover:scale-110 transition brightness-0 saturate-100 invert" /></Link>
+      <Link to="/inicial" ><img src={logo} className="h-[40px] hover:scale-110 transition brightness-0 saturate-100 invert" /></Link>
       <div className="flex gap-4 justify-between items-center celular:flex-col celular:justify-center celular:items-center celular:m-auto">
         <Link className="text-white celular:text-xl celular:py-1 hover:scale-110 transition hover:text-black font-semibold text-sm" to="/blog">Novidades</Link>
         <Link className="text-white celular:text-xl celular:py-1 hover:scale-110 transition hover:text-black font-semibold text-sm" to="/help">Help</Link>
